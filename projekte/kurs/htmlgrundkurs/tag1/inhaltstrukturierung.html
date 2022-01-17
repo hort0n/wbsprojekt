@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Textstrukturierung</title>
+  <style>
+	h4 {background-color: yellow;}
+	div {background-color:green;}
+	
+  </style>
+  
+</head>
+<body>
+  <h1>Textauszeichnung mit HTML</h1>
+  Text - In HTML sind fast alle elemente in der Lage text aufzunehmen.
+  <p>Textabsatz -  ein sogenannter Fließtext <br>ein manueller Umbruch <br>eine neue Zeile</p>
+
+  <p>Textabsatz</p>
+  <p>Äpfel</p>
+  <hr><!-- Themenwechsel -->
+  <p>Tiere</p>
+  
+  <p>Absatz</p>
+  <h3>Überschrift</h3>
+  <p>absatz</p>
+  
+  <h2>Standardelementeigenschaften</h2>
+  <!-- Was ist der Unterschied zwischen Block- und Inlineelementen? zeigen sie zu jedem mindestens ein Beispiel auf -->
+  <h3>Blockelemente</h3>
+	<p>
+		Block Elemente nutzen immer die komplette Fensterbreite.<br>
+		Typische Blockelemente sind hier alle Überschriften <br>
+		wie h1..h6 und das Absatz-Element <span><</span>p<span>></span> ,
+		<span><</span>hr<span>></span>, <span><</span>ul<span>></span>...
+		
+	<p/>
+	<h4>Blockelement <span><</span>h4<span>></span></h4>
+	
+	<p style="background-color:red; color:white;">Blockelement <span><</span>p<span>></span></p>
+	<div style="background-color:green; color:white;">Blockelement <span><</span>div<span>></span></div>
+	
+	<div style="background:#ccc; width:200px; height:200px">
+	Beispiel div
+	</div>
+	
+	<span style="background:#ccc; width:200px; height:200px">
+	Beispiel span
+	</span>
+	
+	<p>nun <b>wichtiger</b> Text mit &lt;b&gt</p>
+		macht nichts anderes als den entsprechenden Textabschnitt fett,<br>
+		zu formatieren – es ist eine rein optische Veränderung.<br>
+		Möchte man Text, rein aus optischen Zwecken, fetter darstellen, so ist<br>
+		die richtige Wahl.
+
+
+
+	<p>nun <strong>wichtiger</strong> Text mit &lt;strong&gt</p>
+	<p>
+	&lt;strong&gt hat eine inhaltlich-semantische Bedeutung,<br>
+	b hat eigentlich nur eine rein "optische" Bedeutung.<br>
+	Möchte man jedoch etwas wichtiges betonen, also nicht nur optisch<br>
+	sondern vor allem inhaltlich hervorheben, dann sollte man
+	
+	verwenden!
+	</p>
+
+	<p>
+	Die Tags &lt;em&gt und &lt;i&gt betonen ein eingeschlossenes Wort oder Ausdruck.<br>
+	Die Browser stellen den eingeschlossenen Text in einer kursiven Schrift dar.<br> 
+	In der Sprachsynthese wird ein Text in em leicht betont ausgesprochen,<br>
+	ein Text in i mit einer anderen Stimme.
+	Das <i>i-Tag</i> und das em-Tag <em>betonen</em> einen Text
+	</p>
+	
+	
+  <h3>Inlineelement</h3>
+	<p>
+		 Inline-Elemente nehmen nur den Platz in Anspruch,<br>
+		 der auch vom Inhalt benötigt wird.<br>
+		 Typische Inline-Elemente: <span><</span>span<span>></span>,
+		 <span><</span>img<span>></span>, <span><</span>select<span>></span>,
+		 <span><</span>a<span>></span> ....
+	</p>
+	<a style="background-color:red; color:white;"href=#>HTML lernen</a>
+	<a style= "background-color:green; color:white;" href=#>CSS lernen</a>
+	<a style= "background-color:blue; color:white;" href=#>PHP lernen</a>
+	<span style= "background-color:red;">Beispiel Spanelement</span>
+	
+</body>
+</html>

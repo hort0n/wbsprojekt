@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    body{
+      display: grid;
+      grid-template-columns: 1fr 200px 600px 1fr;
+    }
+    ul{
+      grid-column: 2;
+      background-color: #ccc;
+      padding: 20px 0;
+      margin: 0;
+      padding: 10px 0;
+      height: 100vh;
+      
+    }
+    ul > li{
+      background-color: aqua;
+      list-style: none;
+      margin: 10px 0;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+    }
+    body > div{
+      background-color: beige;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  </style>
+  <ul>
+    <li>test1</li>
+    <li>test2</li>
+    <li>test3</li>
+  </ul>
+  <div>
+    <input type="button" value="click" id="btn">
+  </div>
+  <script>
+    var myFunction = function myFunction(e){
+      console.log("test");
+    }
+    $("#btn").click(myFunction);
+  </script>
+</body>
+</html>

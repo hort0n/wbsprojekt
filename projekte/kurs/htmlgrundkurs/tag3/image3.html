@@ -1,0 +1,129 @@
+<!doctype html> 
+<html lang="de"> 
+<head>
+    <meta charset="UTF-8"> 
+    <title>Bilder in HTML einbinden</title> 
+  <style>
+  /* Klassenselektor */
+    .paula{
+    border:10px solid;
+  }
+  
+  .janker{
+  border-color:green;
+  }
+  
+  .warnke{
+  background:blue;
+  }
+  
+  
+  /*.heading{
+  color:lime;
+  }*/
+  /* Selektorenaufzählung */
+  /* Bilder skalierbar */
+  .scale,
+  .img-scale{
+    width:100%;/* ggf. width am Element überschreiben */
+    height:auto;
+    /* Begrenzung auf max-Kantenlänge des Bildes */
+    max-width:800px;
+  }
+  </style>
+</head>
+<body> 
+    <h1 class="paula janker warnke">Das img-Tag</h1>
+    <h3 class="warnke">Bilder in HTML einbinden und darstellen</h3>
+    <h2 class="heading">Standardbildformate im Web</h2>
+    <!--Welche Standardbildformate werden im Web eingesetzt (min. 3)? 
+    Benennen Sie vor und Nachteile der einzelnen Bildformate!-->
+    
+    <!-- Antworten sind in semantisch korrektem Markup auszugeben --> 
+    <!--Beispiel Pseudocode:
+    ggf.: <Gliederungselement>
+    <element> Bildformatname </element>
+    <element> Bildformaterklärung </element>
+    ... usw.
+    <Gliederungselement>
+    
+    -->
+    <dl>
+        <dt>JPEG/JPG (JPEG2000)</dt>
+        <dd>sehr gute Kompression, keine Alphatransparenz, keine Ebenen</dd>
+        <dd>qualitativ hochwertige Bilder bei geringer Dateigröße</dd>
+        <dt>GIF</dt>
+        <dd>kleiner Farbraum mit maximal 256 Farben, Alphatransparenzen, animierbar (KeyframeUnterstützung)</dd>
+        <dd>Grafiken mit geringer Farbtiefe, ggf. Alphatransparenz oder Animationen</dd>
+        <dt>PNG</dt>
+        <dd>unterstützt Alphatranzparenzen bei voller Farbtiefe, verlustfreie Kompression, Ebenen können mitgespeichert werden</dd>
+        <dd>qualitativ hochwertige Bilder mit Alphatransparenz</dd>
+    <dt>WebP</dt>
+    <dd>ermöglicht Animationen, verlustfreie oder verlustbehaftete Kompression, Alphatranzparenzen bei 24Bit</dd>
+    <dd>Alternative zu Gif und JPEG, kleinere Dateien bei besserer Qualität,aktuell kein Standardsupport in Anwendungen unzureichende Browserkompatibilität</dd>
+        <dt>SVG</dt>
+        <dd>verlustfrei skalierbar, geringe Dateigröße</dd>
+        <dd>flexible Grafiken und Formen wo die Skalierbarkeit erhalten bleiben muss</dd>
+    </dl>
+    <!--Worauf ist im allgemeinen bei der Nutzung von Bildern im Web zu achten? (min. 3)-->
+    <!-- Antworten sind in semantisch korrektem Markup auszugeben --> 
+    <h3>Bildnutzung</h3>
+    <h4>Bei der Erstellung von Grafiken für das Web sollte man darauf achten das die Bilder nicht zu groß sind (Dateigröße und Abmessung).</h4>
+    <p>Der Kompressionsfaktor, die Abmessungen(Auflösung) sowie Farbraum und Farbtiefe ermöglichen ein reduzieren der Dateigröße. Für Bilder im WEb sollte stets der RGB(SRGB)- Modus gewählt werden sowie eine Auflösung von 72/96dpi.</p>
+  <p> Für moderne Endgeräte (zb. Geräte mit Retina Display) sollten die Bildabmessungen doppelt so groß gewählt werden als sie tatsächlich benötigt werden. Alternativ kann man Sie in verschiedenen Auflösungen abspeichern und mit Hilfe von Javascript oder CSS das geeignetere Bild darstellen.</p>
+  
+  <h4>E-Recht</h4>
+  <p>Bei der Nutzung von Bildern sind Urheberrechte, Recht am eigenen Bild, der Denkmalschutz, Wettbewerbsrecht und Lizenzrechte zu beachten.<br>
+  Die aktuell gültigen Rechtsbestimmungen der jeweiligen Staaten bzw. Staatengemeinschaften sind ebenso zu beachten.</p>
+  <p>Es empfiehlt sich generell die Bildquelle anzugeben.</p>
+    <h2>Bilder einbinden</h2>
+    <!--Wie können Bilder im HTML Markup eingebunden werden? Zeigen Sie dazu mindestens ein Beispiel auf. Das Bild soll im Browser sichtbar sein!-->
+    <!-- Antworten sind in semantisch korrektem Markup auszugeben --> 
+    <ul>
+        <li> 
+            <img src="haus.jpg" alt="Ich - das alt-Attribut werde dargestellt weil die gewünschte Datei nicht geladen oder gefunden werden konnte. Screenreader lesen mich vor und Suchmaschinen verwenden mich als Datei-Titel zum Dateinamen" width="600" height="200">
+      <!-- Um ein Bild in HTML zu referenzieren steht uns das <img> Tag zur Verfügung. Das IMG-Tag alleine reicht nicht aus um ein Bild vollständig zu referenzieren dazu benötigen wir das Attribut src="pfad/zur/datei.Dateiendung" (source=Quelle). Für Validität, Barrierefreiheit und Suchmaschinenoptimierung(SEO) muss das Attribut alt="aussagekräftige Bildbezeichnung" angegeben werden-->
+        </li>
+    <li>
+      <img src="img/w80x80.jpg" alt="Weidenkätzchen im Winter" width="80" height="80" title="erweiterte Beschreibung">
+      <!--
+      alt: Überschrift
+      title: Beschreibung
+      src: Dateiname
+      -->
+      
+      <!-- <svg width="100%">
+        <rect width="50%" height="80"/>
+      </svg> -->
+    </li>
+    <li>
+    <figure><!-- Container für Medieninhalte -->
+      <figcaption>Überschrift für figure</figcaption>
+      <img src="img/vogel.jpg" alt="Vogel auf Zaun">
+    </figure>
+    </li>
+    <li>
+      <picture>
+        <source srcset="img/vogel_large.jpg" media="(min-width:850px)">
+        <source srcset="img/hotel.jpg" media="(min-width:600px)">
+        <img src="img/vogel.jpg" alt="Vogel auf Zaun"  class="img-scale">
+        <!-- <img src="img/vogel.jpg" alt="Vogel auf Zaun" srcset="img/vogel_large.jpg 1.5x,img/vogel_large.jpg 2x,"> -->
+      </picture>
+    </li>
+    <li>
+      <!-- <img src="img/roesterei_large.jpg" alt="Privatrösterei in Jena" width="400" height="400" style="width:100%;height:auto;max-width:800px;"> -->
+      <img src="img/roesterei_large.jpg" alt="Privatrösterei in Jena" width="400" height="400" class="img-scale">
+    </li>
+  </ul>
+  <article>
+  <h3>Heading</h3>
+  <img src="img/vogel.jpg" alt="Vogel auf Zaun">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, nobis, repudiandae commodi ut quaerat a in accusamus molestiae sunt tempora. Illo, numquam corporis tenetur necessitatibus expedita! Facere, sequi saepe excepturi?</p>
+  </article>
+  <hr>
+  
+  <h3>Heading</h3>
+  <p><img src="img/vogel.jpg" alt="Vogel auf Zaun">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, nobis, repudiandae commodi ut quaerat a in accusamus molestiae sunt tempora. Illo, numquam corporis tenetur necessitatibus expedita! Facere, sequi saepe excepturi?</p>
+  
+</body>
+</html>

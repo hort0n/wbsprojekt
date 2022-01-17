@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="de"> 
+<head>
+  <meta charset="utf-8">
+  <title>Formularaufbau -  Übung und Recherche</title>
+  <style>
+    label{
+      min-width: 100px;
+      display: inline-block;
+    }
+
+  </style>
+</head> 
+<body>
+  <h1>Übung und Recherche Formularaufbau</h1>
+
+  <!-- Erstellen Sie ein Formular mit folgenden Eingabemöglichkeiten -->
+  <!-- Anredeauswahlmöglichkeit Herr/Frau - recherchieren Sie hierbei nach dem input type="radio" oder dem Element select-->
+  
+   <!-- Vorname --> 
+
+   <!-- Nachname -->
+
+   <!-- Straße -->
+
+   <!-- Hausnummer -->
+
+   <!-- PLZ -->
+
+   <!-- Stadt -->
+
+   <!-- Email -->
+ 
+   <!-- Telefon -->
+
+   <!-- Textabsatz mit folgendem Inhalt: Wie dürfen wir mit Ihnen Kontakt aufnehmen? -->
+   <!-- Auswahlmöglichkeit für folgende Werte: telefonisch , email, postalisch 
+        Es sollen mehrere Werte gleichzeitig auswählbar sein - Recherche type="checkbox" alternativ Element select 
+    --> 
+   
+   <!-- mehrzeiliges Texteingabefeld - Recherche Element textarea -->
+
+   <!-- Sendebutton -->
+  
+   <!-- 
+   Prüfen Sie ob alle Werte übermittelt werden! Dokumentieren/kommentieren Sie ggf. Ihre Lösungsschritte! 
+   -->
+   <form action="ausgabe.php" method="POST" id="testform">
+    <div>
+  
+      <label for="herr">Herr:
+        <input type="radio" name="gender" id="herr" value="herr">
+      </label>
+      <br>
+      <label for="frau">Frau: 
+        <input type="radio" name="gender" id="frau" value="frau">
+      </label>
+    </div>
+    <br>
+    <div>
+      <label for="vorname">Vorname: </label>
+      <input type="text" name="vorname" id="vorname">
+    </div>
+    <div>
+      <label for="nachname">Nachname: </label>
+      <input type="text" name="nachname" id="nachname">
+    </div>
+    <div>
+      <label for="strasse">Straße: </label>
+      <input type="text" name="strasse" id="strasse">
+    </div>
+    <div>
+      <label for="hausnummer">Hausnummer: </label>
+      <input type="text" name="hausnummer" id="hausnummer">
+    </div>
+    <div>
+      <label for="plz">PLZ: </label>
+      <input type="text" name="plz" id="plz">
+    </div>
+    <div>
+      <label for="stadt">Stadt: </label>
+      <input type="text" name="stadt" id="stadt">
+    </div>
+    <div>
+      <label for="email">Email: </label>
+      <input type="text" name="email" id="email">
+    </div>
+    <div>
+      <label for="tel">Telefone: </label>
+      <input type="text" name="tel" id="tel">
+    </div>
+    <p>Wie dürfen wir mit Ihnen Kontakt aufnehmen?</p>
+
+    <div>
+      <input type="checkbox" name="check_tel" value="telefonisch" id="check_tel">
+      <label for="check_tel">telefonisch</label>
+    </div>
+    <div>
+      <input type="checkbox" name="check_email" value="email" id="check_email">
+      <label for="check_tel">email</label>
+    </div>
+    <div>
+      <input type="checkbox" name="check_post" value="postalisch" id="check_post">
+      <label for="check_post">postalisch</label>
+    </div>
+    <div>
+      <p>Zusatzinformation bitte hier angeben</p>
+      <textarea form ="testform" name="zusatzinfo" id="zusatzinfo" cols="35" wrap="soft"></textarea>
+    </div>
+    <br>
+    <div>
+      <input type="submit" value="senden">
+    </div>
+   </form>
+
+
+   
+</body>
+</html>

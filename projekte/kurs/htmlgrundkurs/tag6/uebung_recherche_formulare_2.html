@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="de"> 
+<head>
+  <meta charset="utf-8">
+  <title>Formularaufbau -  Übung und Recherche</title>
+  <style>
+    div{margin-bottom:1em;}
+    label{min-width:120px;display:inline-block;}
+  </style>
+</head> 
+<body>
+  <h1>Übung und Recherche Formularaufbau</h1>
+
+  <!-- Erstellen Sie ein Formular mit folgenden Eingabemöglichkeiten -->
+  <form method="POST" action="ausgabe_textbausteine.php">
+  <fieldset>
+    <legend>Überschrift für Fieldset</legend>
+  <!-- Anredeauswahlmöglichkeit Herr/Frau - recherchieren Sie hierbei nach dem input type="radio" oder dem Element select-->
+  <div>
+       <label for="salutation">Anrede</label>
+       <select name="salutation" id="salutation">
+        <option value="nichts ausgewählt">-- bitte auswählen --</option>
+        <option>Herr</option>
+        <option>Frau</option>
+       </select>
+      <!-- Mit dem <select>-Element können wir Auswahllisten erstellen dazu benötigen wir aber auch das <option>-Element. -->
+   </div>
+   <div>
+      <p>Alternative Auswahl mit Radiobuttons</p>
+      <input type="radio" name="salutation1" value="Frau" id="frau">
+      <label for="frau">Frau</label>
+      <input type="radio" name="salutation1" value="Herr" id="herr">
+      <label for="herr">Herr</label>
+      <!-- Mit dem Attribut type="radio" in unserem <input>-Element können wir sogenannte Radio-Buttons erzeugen die ebenfalls zu Auswahlzwecken genutzt werden können. Hier bei ist es wichtig zu beachten das alle Auswahloptionen den gleichen Wert im Attribut name besitzen, da Sie sonst nicht zugeordnet werden können. -->
+   </div>
+
+   <!-- Vorname --> 
+   <div>
+      <label for="vorname">Vorname:</label>
+      <input name="vorname" id="vorname">
+   </div>
+   <!-- Nachname -->
+   <div>
+      <label for="nachname">Nachname:</label>
+      <input name="nachname" id="nachname">
+   </div>
+   <!-- Straße -->
+   <div>
+      <label for="street">Straße:</label>
+      <input name="street" id="street" >
+      <!-- nicht schön : pattern="[a-zA-Z\-\.\s]{1,}" -->
+    </div>
+   <!-- Hausnummer -->
+    <div>        
+      <label for="streetnr">Hausnummer:</label>
+      <input name="streetnr" id="streetnr">
+      <!-- pattern="[0-9\-\/]{1,5}[a-zA-Z]{,3}" -->
+    </div>
+   <!-- PLZ -->
+   <div>
+      <label for="plz">PLZ:</label> 
+      <input name="plz" id="plz" pattern="^[\d]{5}$">
+     <!-- Erzwingt Ziffernblock und validiert auf Zahlen  - pattern="[0-9]"-->
+      
+      <!-- Beispiel Pattern Postleitzahl -->
+      <!-- [0-9][0-9][0-9][0-9][0-9] 
+      [0-9]{5}
+      -->
+      
+      <!-- Beispiel einfaches Datum -->
+      <!--[\d][\d][.][\d][\d][.][\d][\d][\d][\d]-->
+      
+      <!--
+       Zeichen bei Regulären ausdrücken
+       \ = entwertet/maskiert/escaped ein Zeichen so das dieses nicht als Text interpretiert wird
+       d = any digit / Ziffer
+       D = not digit / keine Ziffer
+       s = Leerzeichen
+       ^ = beginnt mit
+       $ = ende
+       | = or / logisches oder
+       -->
+   </div>   
+   <!-- Stadt -->
+    <div>        
+     <label for="city">Stadt:</label>
+     <input name="city" id="city">
+    </div>
+   <!-- Email -->
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="mail@domainname.tld">
+      <!-- a@a-->
+     <!-- bla@localhost
+      @123-->
+     <!-- Der input type="email" ist ein neuer HTML5 type. Ältere Browser , ohne HTML5 Unterstützung verwenden automatisch type="text". Man spricht hierbei von der graceful degradation (Abwärtskompatibilität). -->
+      <!-- In modernen Browsern findet eine Emailvalidierung statt (ein oder mehrere Zeichen)@(ein oder mehrere Zeichen) diese kann nur hinzufügen des Attributes pattern="RegEx" mit Regulären Ausdrücken als Attributwert überschrieben werden.
+      Mailadressen sollten nie zu detailiert geprüft werden. Andernfalls passiert es sehr leicht das Nutzergruppen schnell ausgeschlossen werden. Halten Sie sich dafür an den RFC822 (http://www.ietf.org/rfc/rfc0822.txt) , die standardmäßige Browservalidierung entspricht diesem!
+      Für den Mailversand selbst ist der Messagestandard nach RFC5322
+      (http://www.ietf.org/rfc/rfc5322.txt) zu beachten.
+      -->
+    </div>  
+   <!-- Telefon -->
+   <div>
+     <label for="tel">Telefon:</label>
+     <input type="tel" id="tel" name="tel">
+     <!--++49(0)30 12 23-0
+     12 230-->
+   </div>
+   <!-- Textabsatz mit folgendem Inhalt: Wie dürfen wir mit Ihnen Kontakt aufnehmen? -->
+   <!-- Auswahlmöglichkeit für folgende Werte: telefonisch , email, postalisch 
+        Es sollen mehrere Werte gleichzeitig auswählbar sein - Recherche type="checkbox" alternativ Element select 
+    --> 
+   <div>
+      <p>Wie dürfen wir mit Ihnen Kontakt aufnehmen?</p>
+      <input type="checkbox" name="contactme[]" value="telefonisch" id="telefonisch">
+      <label for="telefonisch">Telefon</label>
+      <input type="checkbox" name="contactme[]" value="email" id="c-email" checked>
+      <label for="c-email">Email</label>
+      <input type="checkbox" name="contactme[]" value="postalisch" id="postalisch">
+      <label for="postalisch">Brief</label>
+      
+      <!-- Mit dem Attribut type="checkbox" in unserem <input>-Element können wir sogenannte Checkboxen erzeugen die ebenfalls zu Auswahlzwecken genutzt werden können. Bei den Checkboxen ist es ebenfalls wichtig das alle Auswahloptionen den gleichen Wert im Attribut name besitzen. Das  Attribut checked bzw. XHTML-konform (checked="checked") legt eine Vorauswahl fest.  -->
+   </div>
+    <div>
+     <label for="contactme2">Alternative Kontaktaufnahmemöglichkeit</label>
+     <select name="contactme2" id="contactme2" multiple size="3">
+        <!-- Attribute für Select:
+        selected =  vorauswahl festlegen (standardmäßig ist immer das erste option vorausgewählt, selected muss dazu nicht gesetzt werden)
+        multiple =  ermöglicht eine Mehrfachauswahl
+        size = gibt die anzahl der gleichzeitig darzustellenden Auswahlmöglichkeiten an
+        -->
+        <option value="email" selected>Email</option>
+        <option value="telefonisch">Telefon</option>
+       <!-- <optgroup label="gruppe"> -->
+        <option value="postalisch">Brief</option>
+         <!-- </optgroup> -->
+      </select>
+    </div>     
+   <!-- mehrzeiliges Texteingabefeld - Recherche Element textarea -->
+   <div>  
+      <label for="message">Ihre Nachricht:</label>
+      <textarea name="message" id="message" cols="50" rows="10">voreingestellter Wert - wird Übermittelt</textarea>
+     <!--Mit dem <textarea> Element können wir mehrzeilige Eingabefelder erzeugen
+      Auch hier stehen uns mehrere Attribute zur Verfügung um unser Eingabefeld genauer zu definieren. Das <textarea> Element benötigt im Gegensatz zum <input> Element ein schließendes Tag. Die Textarea besitzt auch kein value. Sie wir zwischen öffnendem und schließenden Tag befüllt.
+      Mit dem Attribut cols geben wir die Zeichenbreite unseres Textfeldes an
+      Mit dem Attribut rows geben wir die Zeilenhöhe unseres Textfeldes an.   
+      -->
+    </div>   
+</fieldset>    
+   <!-- Sendebutton -->
+  <input type="submit" value="senden">
+  <!-- Bei dem <button>Element wird der value Wert übermittelt, Das button Element sowie der input type="button" werden häufig in Kombination mit Javascript genutzt (Formularverarbeitung mittels AJAX-Technik)-->
+  <button type="submit">absenden</button>
+   <!-- 
+   Prüfen Sie ob alle Werte übermittelt werden! Dokumentieren/kommentieren Sie ggf. Ihre Lösungsschritte! 
+   -->
+ </form>  
+</body>
+</html>
+

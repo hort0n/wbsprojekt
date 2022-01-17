@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formularaufbau</title>
+    <style>
+        label {
+            min-width: 100px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Aufbau von Formularen</h1>
+    <form method="POST" action="ausgabe.php" enctype="multipart/form-data">
+        <!--
+      Übermittlungsmethoden:
+      
+      method="GET" = zu übermittelnde Informationen werden an die Aufrufadresse angehängt. Die Daten sind somit sichtbar und manipulierbar. Sie hat eine maximale Zeichenbegrenzung von ca. 2000 Zeichen.
+    -->
+
+        <h2>Login und Upload</h2>
+        <!-- <input name="test" value=""> -->
+        <!-- dateiname.endung?test=nutzereingabe -->
+        <!-- <p>User:</p> <input type="text" name="user" value=" ">
+   <p> User: <input type="text" name="user" value=" "></p>
+    <p> User: <input type="text" name="user" value=" "></p> -->
+        <div>
+            <label for="user">User:</label>
+            <input type="text" name="user" value=" " id="user">
+            <!-- <hr>-->
+            <!-- Seit HTML5 erlaubt :
+      <label>User:
+      <input type="text" name="user" value=" "></label>  -->
+        </div>
+        <!-- 
+      Das name-Attribut ist für die Übermittelung von Werten zwingend notwendig, sofern Eingaben nicht mit Javascript abgefragt werden.
+      Der angegebene Wert am Name-Attribut  bildet im Zusammenspiel mit der Nutzereingabe oder einem befüllten value-Attribut ein sogenanntes Name-Wert-Paar.
+    -->
+    <!--
+            key-value-pairing
+            name = wert 
+            01_formularaufbau.html?user=test
+            User ist in diesem Beispiel der Inhalt des name-Attributes, test ist die Nutzereingabe die im value gespeichert wird.
+        -->
+        <div>
+            <label for="pw">Passwort:</label>
+            <input type="password" name="pw" id="pw">
+        </div>
+
+        <div>
+            <label for="upload">Bitte Datei auswählen </label>
+            <input type="file" name="pw" id="upload">
+        </div>
+        <!-- dateiname.endung?user=test&pw=blubb -->
+        <!-- index.php?page_id=25&news_id -->
+
+
+        <input type="submit" value="senden">
+        <!-- <input type="reset" > -->
+        <!-- verschiedene Inputtypen -->
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+
+/* Custom Properties precompilieren oder servseitig generieren um Prowserkompatibilität sicherzustellen*/
+/*  https://madlittlemods.github.io/postcss-css-variables/playground/ */
+:root{
+    /* Layoutspezifisch überschreiben */
+    --link:#555;
+    --font:'Courier New', Courier, monospace;
+    --font2:verdana,sans-serif;
+    --wrap:1200px;
+    --mar-r:1%;
+    --mar-l:1%;
+    --mar-t:1%;
+    --mar-b:1%;
+    --pad-r:1%;
+    --pad-l:1%;
+    --pad-t:1%;
+    --pad-b:1%;
+    /* --mar-r:40px;
+    --mar-l:40px;
+    --mar-t:40px;
+    --mar-b:40px; */
+  }
+  /* ggf. boxmodell verändern*/
+  html{
+    box-sizing:border-box;
+  }
+  html *,*:before,*:after,*:marker{
+    box-sizing:inherit;
+  }
+  
+  html{
+    /* Standardschrift für alle Inhalte*/
+    font-family:var(--font2);
+    /*primäre Textfarbe*/ 
+    color:#000;
+    /* Hintergrundfarbe festlegen */
+    background-color:#f3f3f3;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+  }
+  h1,h2,h3{
+    margin: 0;
+  }
+  ul, ol{margin: 0; padding: 0; list-style: none;}
+  /* Interaktive Elemente */
+  a{color:var(--link);}
+  a:hover,a:focus{text-decoration:none;}
+  /*formularelemente*/
+  /* input,select,textarea{}
+  input:hover,select:hover,textarea:hover{}
+  input:focus,select:focus,textarea:focus{} */
+  /* ggf sonderformatierungen für type="submit,button, type="radio" und type="checkbox"*/
+  
+  /*weitere hilfklassen */
+  .hide-offset{
+    position:absolute;
+    left:-9999em;
+  }
+  
+  [class*="hide-"]:hover{
+    left:auto;
+    max-height:none;
+    max-width:none;
+    overflow:visible;
+  }
+  .imgscale{
+    width:100%;
+    height:auto;
+    display:block;
+  }
+  .center{
+    margin: 0 auto !important;
+  }
+  .bg-dark{
+    background-color: #000 !important;
+  }
+  .bg-dark-grey{
+    background-color: #333 !important;
+  }
+  .bg-white{
+    background-color: #fff !important;
+  }
+  .f-size{
+    font-size: 16px;
+  }
+  .border-black{
+    border: 1px solid black !important;
+  }
+  .border-grey{
+    border-top: 3px solid #555 !important;
+    border-bottom: 3px solid #555 !important;
+  }  
+  .border-white{
+    border: 1px solid white !important;
+  }
+  .text-light{
+    color: #ced4da !important;
+  }
+  .text-dark{
+    color: #000 !important;
+  }
+  .text-red{
+    color:red !important;
+  }
+  .text-decoration-none{
+    text-decoration: none !important;
+  }
+  
+
+  .custom-select{
+    display: inline-block;
+    width: 100%;
+    height: calc(1.5em + 1.5rem + 2px);
+    padding: .75rem 2.5rem .75rem 1.5rem;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #55595c;
+    vertical-align: middle;
+    background: #f7f7f9;
+    border: 1px solid #ced4da;
+  }
+
+  .input-control{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(1.5em + 1.5rem + 2px);
+    padding: .2rem 1.5rem;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #f7f7f9;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0;
+  }
+
+  .btn{
+    display: block;
+    font-weight: 600;
+    color: #ced4da;
+    text-align: center;
+    padding: .75rem 1.5rem;
+    /* vertical-align: middle; */
+    border: 1px solid transparent;
+    line-height: 1.5rem;
+    border-radius: 0;
+    font-size: .765625rem;
+    text-transform: uppercase;
+    width: 100%;
+    background-color: #1a1a1a;
+    border-color: #1a1a1a;
+  }
+
+  .btn:hover{
+    color: #fff;
+    font-size: .9rem;
+    background-color: #070707;
+    border-color: #010101;
+  }
+  .btn-works{
+    display: block;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    padding: .75rem 1.5rem;
+    /* vertical-align: middle; */
+    border: 1px solid transparent;
+    line-height: 1.5rem;
+    border-radius: 5px;
+    font-size: .765625rem;
+    text-transform: uppercase;
+    width: 33%;
+    background-color: #fff;
+    border-color: #fff;
+  }
+
+  .btn-works:hover{
+    color: #fff;
+    font-size: .9rem;
+    background-color: #555;
+    border-color: #fff;
+  }
+
+  /* Spalten */
+  /* Bereiche zentrieren*/
+  .wrap,#wrapper{
+    max-width:1200px;
+    max-width:var(--wrap);
+    margin-left:auto;
+    margin-right:auto;
+  }
+  
+  .test [class]{outline:1px solid red;}
+  .test [class*="col-"]{
+    /* background:yellowgreen;margin-bottom:0.5em; */
+    outline:1px solid yellowgreen;
+  }
+  
+  .test [class]:before{
+    content:attr(class) " ";
+    display:block;
+  } 
+  
+  /* Spaltenbreiten / Spaltenraster vordefinieren 6 /8 /10 /12 usw. ggf. klassen ergänzen*/
+  .col-100{width:100%;}
+  .col-50,
+  .col-1_2,
+  .col-3_6{width:50%;}
+  .col-25{width:calc(25% - 2px);}
+  .col-75,.col-3_4{flex: 0 0 75.666667%;max-width: 75.666667%;}
+  .col-33,
+  .col-1_3,
+  .col-2_6{width:33.3333%;}
+  .col-66,
+  .col-2_3,
+  .col-4_6{width:66.6666667%;flex: 0 0 66.666667%;max-width: 66.666667%;}
+  .col-16,.col-1_6{width:16.6666667%;}
+  .col-5_6{width:83.3333%;}
+  /* mindestbreiten für adaptives Seitenverhalten aller spalten*/
+  [class*="col-"]{min-width:160px;}
+  
+  /* Abstände */
+  .mar-l{margin-left:var(--mar-l);}
+  .mar-r{margin-right:var(--mar-r);}
+  .mar-t{margin-top:var(--mar-t);} 
+  .mar-b{margin-bottom:var(--mar-b);}
+  .mar-tb{margin-top:var(--mar-t);margin-bottom:var(--mar-b);}
+  .mar-lr{margin-left: var(--mar-l);margin-right:var(--mar-r);}
+  
+  .pad-l{padding-left:var(--pad-l);}
+  .pad-r{padding-right:var(--pad-r);} 
+  .pad-t{padding-top:var(--pad-t);} 
+  .pad-b{padding-bottom:var(--pad-b);} 
+  .pad-tb{padding-top:var(--pad-t);padding-bottom:var(--pad-b);} 
+  .pad-lr{padding-left:var(--pad-l);padding-right:var(--pad-r);} 
+  /* .mar-1{} */
+  /* spalten mit abständen */
+  .col-50.mar-r,.col-50.mar-l,
+  .col-1_2.mar-r,.col-1_2.mar-l,
+  .col-3_6.mar-r,.col-3_6.mar-l{width:49%;}
+  
+  .col-50.mar-r.mar-l, .col-50.mar-lr{width:48%;}
+  
+  .col-33.mar-r, .col-33.mar.l,
+  .col-1_3.mar-r, .col-33.mar-l,
+  .col-2_6.mar-r, .col-2_6.mar-l{width:32.3333%;}
+  
+  .col-33.mar-r.mar-l, .col-33.mar-lr{width:31.3333%;}
+  
+  /* 
+  .col-50.mar-r{width:calc(50% - var(--mar-r));}
+  .col-50.mar-l{width:calc(50% - var(--mar-l));} */
+  
+  /* wenn float */
+  .fl-l{float:left;}
+  .fl-r{float:right;}
+  /* clearen von floats */
+  .clear{clear:both;}
+  .clearfix:after{
+    content:"";
+    display:table;
+    clear:both;
+  }
+  /* flex-container*/
+  
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  
+  .d-flex{display: flex !important;}
+  .justify-content-between{
+    justify-content: space-between !important;
+  }
+  .justify-content-center{
+    justify-content: center !important;
+  }
+  .justify-content-end{
+    justify-content: end;
+  }
+  .justify-content-space-around{
+    justify-content: space-around;
+  }
+  .flex-direction-column{
+    flex-direction: column;
+  }
+  /* flex-child*/
+  .grow{
+    flex-grow:1;
+  }
+  
+  
+  

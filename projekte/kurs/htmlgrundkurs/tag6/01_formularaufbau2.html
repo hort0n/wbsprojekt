@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Formularausgabe</title>
+</head>
+<body>
+  <?php
+  /* mehrzeilliger kommentar */
+  // einzeiliger kommentar
+  ########################
+  #
+  # einzeiliger kommentar
+  #
+  ########################
+  
+  /* Variable deklarieren*/
+  //$text;
+  
+  /* variable deklarieren und initialisieren*/
+  // $text='1.1';
+  
+  //Debugging mit der Methode var_dump()
+  //  var_dump($text);
+  
+  // einfache ausgabe mit echo
+  /*
+  echo "<p>Hallo du schöne Welt</p>"; 
+  */
+
+$formulardaten="";
+$methode="";
+$datei = "<p>Es wurde keine Datei übermittelt</p>";
+
+/* Bei den Superglobalen Post und Get handelt es sich im assoziative (benannte) arrays diese sind nicht über einen Array-index aufrufbar */
+// wenn GET benutzt wurde und nicht leer ist
+if(isset($_GET) && !empty($_GET)){
+ 
+  $methode="<h3>via GET erhalten</h3>";
+  $formulardaten=$_GET;
+} else if(isset($_POST) && !empty($_POST)){
+ 
+  $methode="<h3>via POST erhalten</h3>";
+  //wenn POST benutzt wurde und nicht leer ist
+  $formulardaten=$_POST;
+    //$_FILES['upload']  - upload entspricht dem Wert des Name-Attribut im Form
+    if(!empty($_FILES) && $_FILES['upload']['size'] != 0){
+      $dateiname = "<li><b>dateiname:</b> ".$_FILES['upload']['name'];
+      $dateityp = "<li><b>dateityp:</b> ".$_FILES['upload']['type'];
+      $dateigroesse = "<li><b>dateigrösse:</b> ".$_FILES['upload']['size']." bytes";
+      $datei= "<h3>Übermittelte Datei:</h3><ul>".$dateiname."</li>".$dateityp."</li>".$dateigroesse."</li></ul>";
+      }
+      else{
+      $datei=""; 
+    }
+} else {
+  // nichts übermittelwurde/direkt aufgerufen
+  $formulardaten="Du hast das script direkt ausgeführt bzw. aufgerufen.";
+}
+
+echo $methode;
+//ARRay rekursiv ausgeben
+print_r($formulardaten);
+// Informationen zur Übermittelten Datei ausgeben
+echo $datei;  
+
+  ?>
+ <a href="01_formularaufbau.html">zurück zu 01_formularaufbau.html</a>
+ 
+</body>
+</html>
+  display:inline-block;
+  }
+
+  </style>
+</head>
+<body>
+  <h1>Aufbau von Formularen</h1>
+  <form method="GET">
+    <!--
+      Übermittlungsmethoden:
+      
+      method="GET" = zu übermittelnde Informationen werden an die Aufrufadresse angehängt. Die Daten sind somit sichtbar und manipulierbar. Sie hat eine maximale Zeichenbegrenzung von ca. 2000 Zeichen.
+    -->
+
+    <h2>Login und Upload</h2>
+    <!-- <input name="test" value=""> -->
+    <!-- dateiname.endung?test=nutzereingabe -->
+    <!-- <p>User:</p> <input type="text" name="user" value=" ">
+   <p> User: <input type="text" name="user" value=" "></p>
+    <p> User: <input type="text" name="user" value=" "></p> -->
+    <div>
+      <label for="user">User:</label> 
+      <input type="text" name="user" value=" " id="user">
+      <!-- <hr>-->
+      <!-- Seit HTML5 erlaubt :
+      <label>User:
+      <input type="text" name="user" value=" "></label>  -->
+    </div>
+    <!-- 
+      Das name-Attribut ist für die Übermittelung von Werten zwingend notwendig, sofern Eingaben nicht mit Javascript abgefragt werden.
+      Der angegebene Wert am Name-Attribut  bildet im Zusammenspiel mit der Nutzereingabe oder einem befüllten value-Attribut ein sogenanntes Name-Wert-Paar.
+    -->
+    <!--
+      key-value-pairing
+                          name = wert 
+      01_formularaufbau.html?user=test
+      User ist in diesem Beispiel der Inhalt des name-Attributes, test ist die Nutzereingabe die im value gespeichert wird.
+    -->
+    <div>
+      <label for="pw">Passwort:</label> 
+      <input type="password" name="pw" id="pw">
+    </div>
+    <!-- dateiname.endung?user=test&pw=blubb -->
+    <!-- index.php?page_id=25&news_id -->
+    
+    
+    <input type="submit" value="senden">
+    <!-- <input type="reset" > -->
+    <!-- verschiedene Inputtypen -->
+
+  </form>
+</body>
+</html>

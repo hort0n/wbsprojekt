@@ -1,0 +1,326 @@
+/* Custom Properties precompilieren oder servseitig generieren um Prowserkompatibilität sicherzustellen*/
+
+
+/*  https://madlittlemods.github.io/postcss-css-variables/playground/ */
+
+:root {
+    /* Layoutspezifisch überschreiben */
+    --link: #555;
+    --font: 'Courier New', Courier, monospace;
+    --font2: verdana, sans-serif;
+    --wrap: 1200px;
+    --mar-r: 1%;
+    --mar-l: 1%;
+    --mar-t: 1%;
+    --mar-b: 1%;
+    /* --mar-r:40px;
+    --mar-l:40px;
+    --mar-t:40px;
+    --mar-b:40px; */
+}
+
+
+/* ggf. boxmodell verändern*/
+
+
+/* html{
+    box-sizing:border-box;
+  }
+  html *,*:before,*:after,*:marker{
+    box-sizing:inherit;
+  } */
+
+html {
+    /* Standardschrift für alle Inhalte*/
+    font-family: var(--font2);
+    /*primäre Textfarbe*/
+    color: #000;
+    /* Hintergrundfarbe festlegen */
+    background-color: #f3f3f3;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+ol li {
+    list-style: decimal;
+    list-style-position: inside;
+}
+
+
+/* Interaktive Elemente */
+
+a {
+    color: var(--link);
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+
+/*formularelemente*/
+
+
+/* input,select,textarea{}
+  input:hover,select:hover,textarea:hover{}
+  input:focus,select:focus,textarea:focus{} */
+
+
+/* ggf sonderformatierungen für type="submit,button, type="radio" und type="checkbox"*/
+
+
+/*weitere hilfklassen */
+
+.hide-offset {
+    position: absolute;
+    left: -9999em;
+}
+
+[class*="hide-"]:hover {
+    left: auto;
+    max-height: none;
+    max-width: none;
+    overflow: visible;
+}
+
+.imgscale {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Spalten */
+
+
+/* Bereiche zentrieren*/
+
+.wrap,
+#wrapper {
+    max-width: 900px;
+    max-width: var(--wrap);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.test [class] {
+    outline: 1px solid red;
+}
+
+.test [class*="col-"] {
+    /* background:yellowgreen;margin-bottom:0.5em; */
+    outline: 1px solid yellowgreen;
+}
+
+.test [class]:before {
+    content: attr(class) " ";
+    display: block;
+}
+
+
+/* Spaltenbreiten / Spaltenraster vordefinieren 6 /8 /10 /12 usw. ggf. klassen ergänzen*/
+
+.col-100 {
+    width: 100%;
+}
+
+.col-50,
+.col-1_2,
+.col-3_6 {
+    width: 50%;
+}
+
+.col-25,
+.col-1_4 {
+    width: 25%;
+}
+
+.col-75,
+.col-3_4 {
+    width: 75%;
+}
+
+.col-33,
+.col-1_3,
+.col-2_6 {
+    width: 33.3333%;
+}
+
+.col-66,
+.col-2_3,
+.col-4_6 {
+    width: 66.6666667%;
+}
+
+.col-16,
+.col-1_6 {
+    width: 16.6666667%;
+}
+
+.col-5_6 {
+    width: 83.3333%;
+}
+
+
+/* mindestbreiten für adaptives Seitenverhalten aller spalten*/
+
+[class*="col-"] {
+    min-width: 160px;
+}
+
+
+/* Abstände */
+
+.mar-l {
+    margin-left: var(--mar-l);
+}
+
+.mar-r {
+    margin-right: var(--mar-r);
+}
+
+.mar-lr {
+    margin-left: var(--mar-l);
+    margin-right: var(--mar-r);
+}
+
+
+/* .pad-l{}
+  .pad-r{}  */
+
+
+/* .mar-1{} */
+
+
+/* spalten mit abständen */
+
+.col-50.mar-r,
+.col-50.mar-l,
+.col-1_2.mar-r,
+.col-1_2.mar-l,
+.col-3_6.mar-r,
+.col-3_6.mar-l {
+    width: 49%;
+}
+
+.col-50.mar-r.mar-l,
+.col-50.mar-lr {
+    width: 48%;
+}
+
+.col-33.mar-r,
+.col-33.mar.l,
+.col-1_3.mar-r,
+.col-33.mar-l,
+.col-2_6.mar-r,
+.col-2_6.mar-l {
+    width: 32.3333%;
+}
+
+.col-33.mar-r.mar-l,
+.col-33.mar-lr {
+    width: 31.3333%;
+}
+
+
+/* 
+  .col-50.mar-r{width:calc(50% - var(--mar-r));}
+  .col-50.mar-l{width:calc(50% - var(--mar-l));} */
+
+
+/* wenn float */
+
+.fl-l {
+    float: left;
+}
+
+.fl-r {
+    float: right;
+}
+
+
+/* clearen von floats */
+
+.clear {
+    clear: both;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* flex-container*/
+
+.flex {
+    display: flex;
+}
+
+.flex-w {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* flex-child*/
+
+.grow {
+    flex-grow: 1;
+}
+
+
+/* (max-width:480px) */
+
+@media screen and (max-width:30em) {
+    [class*="col-"] {
+        width: 100%;
+    }
+    [class*="col-"].mar-l,
+    [class*="col-"].mar-r,
+    [class*="col-"].mar-lr {
+        width: 99%;
+        margin-top: 20px;
+        /* margin-bottom: 20px; */
+    }
+    .flex,
+    .flex-w {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:600px) {
+    /*     .menu_item {
+        float: none;
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+        background: #ccc;
+        position: relative;
+    }
+    .menu {
+        outline: 1px solid #ccc;
+    }
+    .sub_menu {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+    } */
+}

@@ -1,0 +1,1 @@
+Legen Sie in diesem Verzeichnis die geforderte CSS-Datei laut Vorgabe der Bausteinprüfung ab.

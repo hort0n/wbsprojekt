@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="de"> 
+	<head>
+		<meta charset="utf-8">
+		<title>Das Boxmodell</title>
+		<style>
+			.box{
+				background: #ccc;
+				width: 600px;
+				height: 150px;
+				padding: 50px 40px 30px 20px;
+				border: 5px solid #333;
+				margin: 10px 20px 30px 40px;
+				box-sizing: border-box;
+			}
+			span.box{
+				background: #ffc;
+
+			}
+      html{
+        background: red;
+      }
+      body{
+        background:orange;
+        /* marging Collapsing - Lösung */
+        /* padding-top: 1px; */
+        /* oder */
+        border-top: 1px solid transparent;
+      }
+      h1{
+        margin-top: 500px;
+      }
+
+		</style>
+	</head> 
+	<body>
+	<h1>Boxmodelle und Besonderheiten</h1>
+	<h2>klassisches Boxmodell</h2> 
+
+	<p>Im visuellen Boxmodell erfolgt die Darstellung durch das zeichnen von Rechtecken. Die Bestandteile dieser Rechtecke beschreibt das Boxmodell</p>
+	<p>Die Container bestehen aus:</p>
+	<img src="boxmodell.gif" alt="das klassische Boxmodell">
+	<div class="box">semantisch bedeutungsloses Blockelement</div>
+  <span class="box">semantisch bedeutungsloses Inlinelement</span>
+  <div>div</div>
+	</body>
+</html> 

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flug</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        h3{
+            margin: 0;
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+        }
+        html{
+            font-size: 110%;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            background: #ccc url(img/bg.jpg);
+            /* background-size: cover; */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .clear::after{
+            content:"";
+            clear: both;
+            display: table;
+        }
+
+        header{
+            position: absolute;
+            display: inline-block;
+            background: #fff;
+            font-size: 30px;
+            font-style: italic;
+            color: brown;
+            border-radius: 50px;
+            padding: 8px 20px;
+            top: 20px;
+            left: 35px;
+
+        }
+        header h3{
+            font-weight: 100;
+        }
+        header a{
+            text-decoration: none;
+            color:brown;
+            
+        }
+        /* nav
+        =============== */
+        .nav{
+            background:brown;
+            margin-top: 30px;
+            padding-right: 10%;
+            height: 38px;
+        }
+        /* menu
+        =================== */
+        .menu{
+            display: table;
+            margin-left: auto;
+        }
+        .menu_item{   
+            float: left;
+            list-style: none;
+            color:#fff;
+            
+        }
+        .menu_item_link{
+            text-decoration: none;
+            color: inherit;
+            line-height:38px;
+            padding: 0 30px;
+        }
+        /* footer
+        =============== */
+        .footer{
+            background: #fff;
+            height: 34px;
+            position:fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding-right: 10%;
+        }
+        .footer_nav{
+            display: table;
+            margin-left: auto;
+        }
+        .footer_nav_item{
+            float: left;
+            list-style: none;
+            color: brown;
+        }
+        .footer_nav_item_link{
+            text-decoration: none;
+            color: inherit;
+            line-height: 34px;
+            padding: 0 30px;
+        }
+        /* active seite
+        =============== */
+        .active, .active:hover, .active:focus{
+            text-decoration: underline;
+        }
+        .menu_item:hover {
+            text-decoration: underline;
+            background: rgba(0,0,0,0.3);
+        }
+        .footer_nav_item:hover {
+            text-decoration: underline;
+            background: rgba(0,0,0,0.3);
+        }
+        /* input fild
+        =============== */
+        .search{
+            position: absolute;
+            right: 10%;
+            bottom: 30%;
+        }
+        .search input{
+            position: relative;
+            border: 2px solid red;
+            border-radius: 50px;
+            padding: 5px 26px 5px 67px;
+        }
+        [for="search"]{
+            position: absolute;
+            left: 10px;
+            top:4px;
+            z-index: 1;
+            color: darkgray;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3><a href="">FlügeFinden24</a></h3>
+    </header>
+    <nav class="nav">
+        <ul class="menu clear">
+            <li class="menu_item"><a class="menu_item_link active" href="">Startseite</a></li>
+            <li class="menu_item"><a class="menu_item_link" href="">Angebote</a></li>
+            <li class="menu_item"><a class="menu_item_link" href="">Last Minute</a></li>
+            <li class="menu_item"><a class="menu_item_link" href="">Konto</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <form class="search">
+            <label for="search">Suche</label>
+            <input type="search" name="search" id="search" value="">
+          </form>
+    </div>
+    <footer class="footer">
+        <ul class="footer_nav clear">
+            <li class="footer_nav_item"><a class="footer_nav_item_link" href="">Über Uns</a></li>
+            <li class="footer_nav_item"><a class="footer_nav_item_link" href="">Kontakt</a></li>
+            <li class="footer_nav_item"><a class="footer_nav_item_link" href="">Impressum</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

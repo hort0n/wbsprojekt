@@ -1,0 +1,64 @@
+<!doctype html> 
+<html lang="de"> 
+<head>
+    <meta charset="UTF-8"> 
+    <title>Bilder in HTML einbinden</title> 
+</head>
+<body> 
+    <h1>Das img-Tag</h1>
+    <h3>Bilder in HTML einbinden und darstellen</h3>
+    <h2>Standardbildformate im Web</h2>
+    <!--Welche Standardbildformate werden im Web eingesetzt (min. 3)? 
+    Benennen Sie vor und Nachteile der einzelnen Bildformate!-->
+    
+    <!-- Antworten sind in semantisch korrektem Markup auszugeben --> 
+    <!--Beispiel Pseudocode:
+    ggf.: <Gliederungselement>
+    <element> Bildformatname </element>
+    <element> Bildformaterklärung </element>
+    ... usw.
+    <Gliederungselement>
+    
+    -->
+    <dl>
+        <dt>JPEG/JPG (JPEG2000)</dt>
+        <dd>sehr gute Kompression, keine Alphatransparenz, keine Ebenen</dd>
+        <dd>qualitativ hochwertige Bilder bei geringer Dateigröße</dd>
+        <dt>GIF</dt>
+        <dd>kleiner Farbraum mit maximal 256 Farben, Alphatransparenzen, animierbar (KeyframeUnterstützung)</dd>
+        <dd>Grafiken mit geringer Farbtiefe, ggf. Alphatransparenz oder Animationen</dd>
+        <dt>PNG</dt>
+        <dd>unterstützt Alphatranzparenzen bei voller Farbtiefe, verlustfreie Kompression, Ebenen können mitgespeichert werden</dd>
+        <dd>qualitativ hochwertige Bilder mit Alphatransparenz</dd>
+    <dt>WebP</dt>
+    <dd>ermöglicht Animationen, verlustfreie oder verlustbehaftete Kompression, Alphatranzparenzen bei 24Bit</dd>
+    <dd>Alternative zu Gif und JPEG, kleinere Dateien bei besserer Qualität,aktuell kein Standardsupport in Anwendungen unzureichende Browserkompatibilität</dd>
+        <dt>SVG</dt>
+        <dd>verlustfrei skalierbar, geringe Dateigröße</dd>
+        <dd>flexible Grafiken und Formen wo die Skalierbarkeit erhalten bleiben muss</dd>
+    </dl>
+    <!--Worauf ist im allgemeinen bei der Nutzung von Bildern im Web zu achten? (min. 3)-->
+    <!-- Antworten sind in semantisch korrektem Markup auszugeben --> 
+    <h3>Bildnutzung</h3>
+    <h4>Bei der Erstellung von Grafiken für das Web sollte man darauf achten das die Bilder nicht zu groß sind (Dateigröße und Abmessung).</h4>
+    <p>Der Kompressionsfaktor, die Abmessungen(Auflösung) sowie Farbraum und Farbtiefe ermöglichen ein reduzieren der Dateigröße. Für Bilder im WEb sollte stets der RGB(SRGB)- Modus gewählt werden sowie eine Auflösung von 72/96dpi.</p>
+  <p> Für moderne Endgeräte (zb. Geräte mit Retina Display) sollten die Bildabmessungen doppelt so groß gewählt werden als sie tatsächlich benötigt werden. Alternativ kann man Sie in verschiedenen Auflösungen abspeichern und mit Hilfe von Javascript oder CSS das geeignetere Bild darstellen.</p>
+  
+  <h4>E-Recht</h4>
+  <p>Bei der Nutzung von Bildern sind Urheberrechte, Recht am eigenen Bild, der Denkmalschutz, Wettbewerbsrecht und Lizenzrechte zu beachten.<br>
+  Die aktuell gültigen Rechtsbestimmungen der jeweiligen Staaten bzw. Staatengemeinschaften sind ebenso zu beachten.</p>
+  <p>Es empfiehlt sich generell die Bildquelle anzugeben.</p>
+    <h2>Bilder einbinden</h2>
+    <!--Wie können Bilder im HTML Markup eingebunden werden? Zeigen Sie dazu mindestens ein Beispiel auf. Das Bild soll im Browser sichtbar sein!-->
+    <!-- Antworten sind in semantisch korrektem Markup auszugeben --> 
+    <ul>
+        <li> 
+            <img src="haus.jpg" alt="Ich - das alt-Attribut werde dargestellt weil die gewünschte Datei nicht geladen oder gefunden werden konnte. Screenreader lesen mich vor und Suchmaschinen verwenden mich als Datei-Titel zum Dateinamen" width="600" height="200">
+      <!-- Um ein Bild in HTML zu referenzieren steht uns das <img> Tag zur Verfügung. Das IMG-Tag alleine reicht nicht aus um ein Bild vollständig zu referenzieren dazu benötigen wir das Attribut src="pfad/zur/datei.Dateiendung" (source=Quelle). Für Validität, Barrierefreiheit und Suchmaschinenoptimierung(SEO) muss das Attribut alt="aussagekräftige Bildbezeichnung" angegeben werden-->
+        </li>
+    <li>
+      <img src="img/w80x80.jpg" alt="Weidenkätzchen im Winter" width="80" height="80">
+    </li>
+  </ul>
+</body>
+</html>

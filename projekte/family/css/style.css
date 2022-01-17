@@ -1,0 +1,199 @@
+
+.logo{
+    position: absolute;
+    max-width:260px;
+    height: auto;
+}
+
+.menu{
+    height: 40px;
+    line-height: 40px;
+    margin-right: 40px;
+}
+.menu_item{
+    list-style: none;
+    margin-left: 20px;
+    color:#000;
+}
+.menu_link{
+    text-decoration: none;
+    color:inherit;
+    padding: 0 10px;
+}
+/* hamburger */
+#trigger{
+    display: none;
+    
+}
+.hamburger{
+    display: none;
+    position: relative;
+    top: 20px;
+    left:20px;
+    width: 30px;
+    height: 5px;
+    background: #7cb958;
+}
+.hamburger::before,
+.hamburger::after{
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: #7cb958;   
+}
+
+/* search form
+================= */
+.search{
+    display: block;
+    margin: 0 20px;
+}
+.search p{
+    margin: 0;
+    line-height: 40px;
+}
+.submit_btn{
+    border: none;
+    background: #e77530;
+    font-size: 16px;
+    padding: 10px;
+}
+.submit_btn:hover, .submit_btn:focus{
+    background: #f86103;
+    color: #fff;
+}
+
+/* Interactive Link */
+.menu_item:hover, .menu_item:focus{
+    background: #78cb47;
+    color: #fff;
+}
+/* active link */
+.active {
+    color: #78cb47;
+}
+.active:hover{
+    color: #000;
+}
+
+
+
+header{
+    width: 1600px;
+    height: 469px;
+    background: url("../img/netzwerkJungeFamilie01.png") no-repeat top center;
+}
+.header_title, .header_sub_title{text-indent: -9999px;}
+
+/* content */
+.content{
+    width: 100%;
+    background: #fff;
+    padding-top: 20px;
+}
+/* content center
+================= */
+.content_center{
+    border-left: 3px solid #ccc;
+    border-right: 3px solid #ccc;
+}
+.h3_title{
+    display: inline-block;
+    text-decoration: none;
+    color: #e77530;
+    margin-left: 10px;
+    padding-top: 10px; 
+}
+.content_center_title:nth-of-type(1) h3{
+    display: inline-block;
+    border-top: 3px solid #ccc;
+}
+.content_center a{
+    display: block;
+    color: #e77530;
+    text-decoration: none;
+}
+.content_center span::before{
+    content: "";
+    border:10px solid;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-left-color: #e77530;
+    display: block;
+    float: left;
+    height: 0;
+    width: 0;
+}
+/* content left 
+================= */
+/* sub menu */
+.sub_menu{
+    list-style: none;
+}
+.sub_menu_item{
+    color:#78cb47;
+    height: 30px;
+    border-top: 3px solid #ccc;
+}
+.sub_menu_link{
+    color: inherit;
+    text-decoration: none;
+    line-height: 30px;
+    padding-left: 20px;
+}
+.sub_menu_item:hover, .sub_menu_item:focus{
+    color: #000;
+    background: #b8d592;
+}
+
+
+/* content right 
+================= */
+.content_right_top{
+    border-top: 3px solid #ccc;
+    border-bottom: 3px solid #ccc;
+}
+.content_right_text .h3_title h3{
+    
+    border-top: none;
+}
+.content_right_text_link{
+    display: block;
+    color: #e77530;
+    text-decoration: none;
+    padding-left: 20px;
+    font-size: 14px;
+    
+}
+.circle{
+    position: relative;
+}
+.circle::before{
+    content:"";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #e77530;
+    border: none;
+    left: -24px;
+    top: -1px;
+}
+.circle:after{
+    content: "";
+    border:9px solid;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-left-color:#fff;
+    display: block;
+    float: left;
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: -16px;
+    top: 1px;
+    
+}

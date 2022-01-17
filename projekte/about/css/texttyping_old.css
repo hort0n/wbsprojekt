@@ -1,0 +1,149 @@
+
+.css-typing{
+
+    margin-bottom: 50px;
+  }
+  
+  .css-typing h2 {
+      border-right: .15em solid orange;
+      font-family: "Courier";
+      /* font-size: 14px; */
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .css-typing h2:nth-child(1) {
+      width: 3em;
+      -webkit-animation: type .5s steps(40, end);
+      animation: type .5s steps(40, end);
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+    
+    .css-typing h2:nth-child(2) {
+      width: 14.5em;
+      opacity: 0;
+      -webkit-animation: type2 2s steps(40, end);
+      animation: type2 2s steps(40, end);
+      -webkit-animation-delay: .5s;
+      animation-delay: .5s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+    .css-typing h2:nth-child(3) {
+      width: 14.5em;
+      opacity: 0;
+      -webkit-animation: type2 2s steps(40, end);
+      animation: type2 2s steps(40, end);
+      -webkit-animation-delay: 2.5s;
+      animation-delay: 2.5s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+   
+    .css-typing.portfolio,
+    .css-typing.kontakt{
+      margin-bottom: 0;
+    }
+    .css-typing.portfolio h2 {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      width: 26em;
+      -webkit-animation: type2 2s steps(40, end);
+      animation: type2 2s steps(40, end);
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+    .css-typing.impressum h2 {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      width: 16em;
+      -webkit-animation: type2 2s steps(40, end);
+      animation: type2 2s steps(40, end);
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+    .css-typing.kontakt h2 {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      width: 16em;
+      -webkit-animation: type2 2s steps(40, end);
+      animation: type2 2s steps(40, end);
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+    .css-typing.glossary h2 {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      width: 28em;
+      -webkit-animation: type2 2s steps(40, end);
+      animation: type2 2s steps(40, end);
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+  
+    @keyframes type {
+      0% {
+        width: 0;
+      }
+      99.9% {
+        border-right: .15em solid orange;
+      }
+      100% {
+        border: none;
+      }
+    }
+    
+    @-webkit-keyframes type {
+      0% {
+        width: 0;
+      }
+      99.9% {
+        border-right: .15em solid orange;
+      }
+      100% {
+        border: none;
+      }
+    }
+    
+    @keyframes type2 {
+      0% {
+        width: 0;
+      }
+      1% {
+        opacity: 1;
+      }
+      99.9% {
+        border-right: .15em solid orange;
+      }
+      100% {
+        opacity: 1;
+        border: none;
+      }
+    }
+    
+    @-webkit-keyframes type2 {
+      0% {
+        width: 0;
+      }
+      1% {
+        opacity: 1;
+      }
+      99.9% {
+        border-right: .15em solid orange;
+      }
+      100% {
+        opacity: 1;
+        border: none;
+      }
+    }
+    
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+    @-webkit-keyframes blink {
+      50% {
+        border-color: tranparent;
+      }
+    }

@@ -1,0 +1,71 @@
+<!doctype html> 
+<html lang="de">
+<head>
+<meta charset="utf-8">  
+<title>positio relative Die CSS-Eigenschaft Position</title>   
+<style> 
+
+/* Farben für Boxen */
+.beispiel{
+	background:#f3f3f3;
+	color:#fc0;
+}
+
+.box1{background:#000;}
+.box2{background:#2f2f2f;}
+.box3{background:#5f5f5f;}
+.box4{background:#8F8F8F;}
+.box4-1{background:#2F0000;}
+.box4-2{background:#5F0000;}
+
+/* h2 + div div{
+	border: 5px solid red;
+} */
+/* [class]{border: 5px solid red;} */
+/* [class*="box"]{border: 5px solid red;} */
+/* .beispiel div{border: 5px solid red;} */
+.beispiel div{
+	width: 200px;
+	min-height: 100px;
+}
+.beispiel .box2{
+    position: relative;
+    top:-100px;
+    right: -200px;
+
+}
+.beispiel .box4{
+    position: relative;
+    top:-300px;
+    right: -400px;
+}
+.beispiel .box4-1{
+    position: relative;
+    top:82px;
+    right: 400px;
+}
+</style>
+</head>
+
+<body>
+<div>
+	<h1>Die CSS-Eigenschaft Position und ihre Werte</h1>
+    <h3>Grundlagen zur Anordnung von Elementen innerhalb einer Seite</h3>
+</div>
+
+<div>
+	<h2>position:<em>relative</em></h2>
+	<div class="beispiel">
+    <div class="box1">Box 1</div>
+		<div class="box2">Box 2</div>
+		<div class="box3">Box 3</div>
+		<!-- style="overflow: hidden;" -->
+        <div class="box4">Box 4
+        	<div class="box4-1">Box 4.1</div>
+        	<div class="box4-2">Box 4.2</div>
+        </div>
+    </div>
+</div>
+ 
+</body>
+</html>

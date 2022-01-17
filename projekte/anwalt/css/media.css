@@ -1,0 +1,26 @@
+@media screen and (max-width:600px){
+    .content_row{
+        flex-direction: column;
+        width: 88%;
+        margin: 0 auto;
+    }
+    .content_col_left {
+        width: 94%;
+        margin: 0 auto;
+      }
+    .content_col_right {
+        width: 94%;
+        margin: 0 auto;
+    }
+    .header_menu ul{
+        flex-direction: column;
+        height: 180px;
+    }
+    .header_menu li:hover, li:focus{
+        background: #fff;
+        border: transparent;
+        color: #000;
+    }
+}
+
+

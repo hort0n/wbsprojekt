@@ -1,0 +1,112 @@
+
+html{
+    background: #EBECEA;
+    font-family: Courier, serif;
+}
+h3{
+    color: #f50569;
+}
+
+.clearfix:after{
+    content: "";
+    clear:both;
+    display: table;
+}
+.container{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+/* header
+====================== */
+.header img{
+    position: absolute;
+    display: block;
+}
+
+.header h1{
+    margin: 0;
+   position: relative;
+}
+.header a{
+    display: block;
+    height: 157px;
+}
+
+/* content
+====================== */
+.content{
+    /* background: #2A2928; */
+    background: url(img/spalten.jpg);
+    background-size: contain;
+}
+
+/* content nav
+====================== */
+.content_nav{
+    float: left;
+    width: 23%;
+    text-align: center;
+    padding-top: 2%;
+}
+.content_nav ul{
+    padding: 0;
+    list-style: none;
+}
+.content_nav li {
+    margin-left: 20px;
+    padding: 2px 0;
+    color: #fff;
+}
+.content_nav a{
+    color: inherit;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    padding: 5px 0;
+}
+.active,
+.active:hover{
+    background: #fff;
+    color:#000;
+}
+.active a{
+    color: red;
+}
+/* content text
+====================== */
+.content_text{ 
+    float: left;   
+    width: 77%;
+}
+.content_text_left{
+    float: left;
+    width: 46%;
+    padding: 2%;
+}
+.content_text_left_img1{
+    float: left;
+    width: 50%;
+    padding: 1%;
+}
+.content_text_left_img1:hover,
+.content_text_left_img1:focus
+{
+    width: 100%;
+}
+
+.content_text_right_img1{
+    width: 100%;
+}
+
+.content_text_right{
+    float: left;
+    width: 46%;
+    padding: 2%;
+}
+
+.footer{
+    background: #262523;
+    padding: 20px 0;
+    text-align: center;
+}

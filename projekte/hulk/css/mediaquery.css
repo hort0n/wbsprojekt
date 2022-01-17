@@ -1,0 +1,142 @@
+
+@media screen and (max-width:991px){
+
+    .title_top {
+
+        font-size: .8em;
+        top: 20%;
+        left: 31%;
+    }
+    
+    .title_center {
+        font-size: 1.5em;
+        top: 32%;
+        left: 33%;
+    }
+    
+    .title_bottom {
+
+        font-size: .8em;
+        top: 55%;
+        left: 37%;
+    }
+    .content_top_left {
+        padding: 0%;
+        float: left;
+        width: 60%;
+    }
+    
+    .content_top_right {
+        padding: 2%;
+        margin-top: 1%;
+        float: none;
+        width: 100%;
+    }
+    .content_top {
+        padding: 5%;
+    }
+}
+@media screen and (max-width:800px){
+    .menu_item{
+        position: absolute;
+        left: -9999px;
+    }
+    .burger_item{
+        display: block;
+        position: relative;
+        top:31px;
+    } 
+
+    #check_menu:checked ~ .menu .menu_item{
+        position: relative;
+        left: auto;
+        float: none;
+        background: #13885c;      
+        top: 57px;
+    }
+
+    #check_menu:checked ~ .burger_item{
+        background: #13885c;
+    }
+    #check_menu:checked ~ .burger_item:before{
+        transform: rotate(35deg);
+        top:1px;
+    }
+    #check_menu:checked ~ .burger_item:after{
+        transform: rotate(-35deg);
+        top: 1px;
+    }
+    .halk_img {
+        display: none;
+    }
+    .title_top {
+
+        font-size: .8em;
+        top: 20%;
+        left: 37%;
+    }
+    
+    .title_center {
+        font-size: 1.5em;
+        top: 32%;
+        left: 39%;
+    }
+    
+    .title_bottom {
+
+        font-size: .8em;
+        top: 55%;
+        left: 43%;
+    }
+}
+
+@media screen and (max-width:650px){
+    .title_top {
+        position: absolute;
+        left: -9999px;
+    }
+    
+    .title_center {
+        position: absolute;
+        left: -9999px;
+    }
+    
+    .title_bottom {
+        position: absolute;
+        left: -9999px;
+    }
+    .logo{
+        display: table;
+        margin: 0 auto;
+    }
+    .content_top_left {
+        padding: 0%;
+        float: none;
+        width: 100%;
+    }
+    
+    .content_top_right {
+        padding: 2%;
+        margin-top: 1%;
+        float: none;
+        width: 100%;
+    }
+    .content_bottom_left {
+        padding: 5%;
+        float: none;
+        width: 100%;
+    }
+    
+    .content_bottom_right {
+        padding: 5%;
+        float: none;
+        width: 100%;
+    }
+    .content_bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5%;
+    }
+    
+}

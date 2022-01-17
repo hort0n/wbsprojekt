@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Crete Round';
+    /* Schriftnamen deklarieren*/
+    src: url('../fonts/creteround-regular-webfont.eot');
+    /*src:local('schriftname') erlaubt den localen Aufruf auch ohne http/(s)-request */
+    src: local('Crete Round'),
+     url('../fonts/creteround-regular-webfont.ttf') format('truetype'),
+      url('../fonts/creteround-regular-webfont.woff') format('wolff'),
+       url('../fonts/creteround-regular-webfont.woff2') format('wolff2'),
+        url('../fonts/creteround-regular-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya SC';
+    /* Schriftnamen deklarieren*/
+    src: url('../fonts/alegreyasc-regular-webfont.eot');
+    /*src:local('schriftname') erlaubt den localen Aufruf auch ohne http/(s)-request */
+    src: local('Alegreya SC'),
+     url('../fonts/alegreyasc-regular-webfont.ttf') format('truetype'),
+      url('../fonts/alegreyasc-regular-webfont.woff') format('wolff'),
+       url('../fonts/alegreyasc-regular-webfont.woff2') format('wolff2'),
+        url('../fonts/alegreyasc-regular-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

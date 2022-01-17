@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Listenpunktdarstellung</title>
+  <!-- Html-kommentar -->
+  <style>
+  /* mehrzeiliger 
+  CSS kommentar
+  */
+  /*
+  selektor{
+    Eigenschaft:wert;
+  }
+  */
+ 
+ 
+ /* ol li{
+    list-style:lower-alpha;
+  }*/
+  
+  /*ol + ol li{ list-style:none}*/
+ 
+ 
+  </style>
+  <!-- Html-kommentar -->
+</head>
+<body>
+
+  <a href="../tag3/verweise.html" style="color:red;font-size:30px;font-weight:bold;">
+	Zurück
+  </a>
+
+  <h1>Listenpunkte Formatieren</h1>
+  <!-- 
+  
+  Wie kann die Darstellung von Listenpunkten (Aufzählungszeichen/Aufzählungssymbol) geändert werden?
+  Zeigen sie für geordnete und ungeordnete Listen mindestens je 3 Verschiedene Darstellungen auf!
+  -->
+  
+  <h2>ungeordnete Liste</h2>
+  <!--
+  list-style: position image type;
+  list-style-position:inside;
+  list-style-image:url(blubb.gif);
+  list-style-type:square;
+  -->
+  <ul>
+    <li>Listenpunkt</li>
+    <li>Listenpunkt</li>
+    <li style="list-style:none;">Listenpunkt</li>
+    <li style="list-style:disc;">Listenpunkt</li>
+    <li style="list-style:circle;">Listenpunkt</li>
+    <li style="list-style-type:square;" >Listenpunkt</li>
+  </ul>
+  
+  <h2>geordnete Liste</h2>
+  
+  <ol type="circle">
+    <li>Listenpunkt</li>
+    <li>Listenpunkt</li>
+    <li>Listenpunkt</li>
+    <li style="list-style-type:lower-roman">Listenpunkt</li>
+    <li style="list-style-type:upper-alpha">Listenpunkt</li>
+    <li style="list-style-type:decimal-leading-zero">Listenpunkt</li>
+  </ol>
+   
+  <h2>Nummerierung</h2> 
+  
+  <ol start="18">
+    <li>Listenpunkt 18</li>
+    <li value="25">Listenpunkt 25</li>
+    <li>Listenpunkt 26</li>
+    <li value="5">Listenpunkt 5</li>
+    <li value="50">Listenpunkt 50</li>
+    <li>Listenpunkt</li>
+  </ol>
+  
+  <h2>Nummerierung (rückwärts)</h2>
+
+  <ol>
+    <li value="17">Listenpunkt 17</li>
+    <li value="16">Listenpunkt 16</li>
+    <li value="15">Listenpunkt 15</li>
+    <li value="14">Listenpunkt 14</li>
+  </ol>
+  
+  
+  <ol start="17" reversed="reversed">
+    <li>Listenpunkt 17</li>
+    <li>Listenpunkt 16</li>
+    <li>Listenpunkt 15</li>
+    <li>Listenpunkt 14</li>
+  </ol>
+  
+  <!-- 
+  Tipp:
+  Benutzen Sie für Ihre Recherche   zu ordered list und unordered list bzw. zu list-style:
+  www.w3schools.com 
+  wiki.selfhtml.org
+  -->
+
+  
+</body>
+</html> 

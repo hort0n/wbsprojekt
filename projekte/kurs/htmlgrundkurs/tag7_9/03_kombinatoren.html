@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Kombinatoren - Standardselektoren</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- HTML Kommentar-->
+  <style>
+    /* CSS - Kommentar */
+    /*Nachfahrenselector */
+    /* Start kombinator Ziel*/
+    html body h1 {
+      border: 3px solid green;
+    }
+
+    /*Kindselektor*/
+
+    html>h1 {
+      background: red;
+    }
+
+    body>ul>li{
+      border: 2px solid red;
+    }
+    /*Nachbarselektopen*/
+    li + li + li {
+      background:yellow;
+    }
+    /*Geschwiesterselektoren*/
+    h3 ~ p{
+      color:violet;
+    }
+  </style>
+  <!-- HTML kommentar -->
+</head>
+
+<body>
+
+  <h1>Standardselektoren <em>CSS</em>-Level1</h1>
+
+  <p class="klasse">Textabsatz</p>
+
+  <h2>Kombinatoren</h2>
+  <!-- <p class="die klasse mit dem punkt"> -->
+  <p class="special-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, maxime, atque, itaque,
+    laborum nostrum aperiam labore accusamus consequuntur voluptates nihil impedit dolorem maiores expedita rem error
+    dolorum quae. Alias, culpa.</p>
+  <h3 id="ich_ueberlege_gerade">Überschrift der 3. Ordnung</h3>
+  <span style="color:red;">mit style Attribut formatiert</span>
+  <p>Test Nachbar</p>
+  <div>
+    <p>test Kindselektor </p>
+  </div>
+
+  <ol>
+    <li>listenpunkt 1</li>
+    <li>listenpunkt 2</li>
+    <li>listenpunkt 3</li>
+    <li>listenpunkt 4</li>
+    <li>listenpunkt 5
+      <h3>test Geschwisterselektor</h3>
+    </li>
+  </ol>
+  <h3>Test Geschwisterselektor</h3>
+  <ul>
+    <li>listenpunkt 1</li>
+    <li>listenpunkt 2</li>
+    <li>listenpunkt 3
+      <ul>
+        <li>listenpunkt 1</li>
+        <li>listenpunkt 2</li>
+        <li>listenpunkt 3</li>
+        <li>listenpunkt 4</li>
+        <li>listenpunkt 5</li>
+      </ul>
+    </li>
+    <li>listenpunkt 4</li>
+    <li>listenpunkt 5</li>
+  </ul>
+  <dl>
+    <dt>Definition <b>Term</b></dt>
+    <dd>definition <b>data</b></dd>
+    <dt>Definition Term</dt>
+    <dd>definition data</dd>
+    <dt>Definition Term</dt>
+    <dd>definition data</dd>
+  </dl>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!--  
+Die Listenelemente der 1. Hierarchie sollen ein vorangestellten Kleinbuchstaben haben.
+Elemente der 2. Hierarchie sollen große Römische Ziffern vorangestellt haben.
+Elemente der 3. Hierarchie sind mit einen Rechteck zu versehen.
+Elemente der 4. Hierarchie bekommen vorangestellte Ziffern . 
+ 
+ 
+
+Listenpunkt 1
+     Listenpunkt 1.1
+             Listenpunkt 1.1.1
+                             Listenpunkt 1.1.1.1
+Listenpunkt 2
+Listenpunkt 3
+		Listenpunkt 3.50
+							Listenpunkt 3.50.1
+		Listenpunkt 3.51
+		Listenpunkt 3.52
+							Listenpunkt 3.52.1
+														Listenpunkt 3.52.1.1
+Listenpunkt 4
+Listenpunkt 5
+		Listenpunkt 5.50
+		Listenpunkt 5.51
+Listenpunkt 6 
+-->
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Listenelemente</title>
+  </head>
+  <body>
+	<ol style="list-style-type:lower-alpha;">
+		<li>
+			Listenpunkt 1
+			<ol style="list-style:upper-roman;">
+				<li>
+					Listenpunkt 1.1
+					<ol style="list-style:square">
+					
+						<li>
+							Listenpunkt 1.1.1.1
+						</li>
+					</ol>
+				</li>
+			</ol>
+		</li>
+		<li>
+			Listenpunkt 2
+		</li>
+		<li>
+			Listenpunkt 3
+			<ol style="list-style:upper-roman;">
+				<li>
+					Listenpunkt 3.50
+					<ol style="list-style:square">
+						<li>Listenpunkt 3.50.1</li>
+					</ol>
+				</li>
+				<li>Listenpunkt 3.51</li>
+				<li>Listenpunkt 3.52
+					<ol style="list-style:square">
+						<li>
+							Listenpunkt 3.52.1
+							<ol>
+								<li>
+									Listenpunkt 3.52.1.1
+								</li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+				
+			</ol>
+		</li>
+		<li>
+			Listenpunkt 4
+		</li>
+		<li>
+			Listenpunkt 5
+			<ol style="list-style:upper-roman;">
+				<li>
+					Listenpunkt 5.50
+				</li>
+				<li>
+					Listenpunkt 5.51
+				</li>
+			</ol>
+		</li>
+		<li>
+			Listenpunkt 6
+		</li>
+	</ol>
+ </body>
+</html>

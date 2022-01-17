@@ -1,0 +1,94 @@
+/* body {
+  display: flex;
+  flex-direction: column;
+}
+ */
+/* main {
+  margin: 2rem;
+} */
+
+.pictures {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+
+/*  */
+.bild {
+  width: 498px;
+  height: 498px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+/*  */
+#bigimage {
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1024px) {
+  #bigimage {
+    width: 98%;
+  }
+}
+@media (max-width: 800px) {
+  .pictures {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bild {
+    width: 50%;
+    height: 498px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    margin: 0.5rem;
+    flex-direction: column;
+  }
+  #bigimage {
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+/*  */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+/*  */
+#closeOverlayButton {
+  float: left;
+  color: white;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+#closeOverlayButton:hover {
+  color: #eecea4;
+}
+
+/*end of import*/
+.instruction {
+  margin-top: 3rem;
+}

@@ -1,0 +1,98 @@
+<!doctype html> 
+<html lang="de"> 
+<head>
+	<meta charset="UTF-8"> 
+	<title>Bilder in HTML einbinden</title> 
+</head>
+<body> 
+	<h1>Das img-Tag</h1>
+	<h3>Bilder in HTML einbinden und darstellen</h3>
+	<h2>Standardbildformate im Web</h2>
+	<!--Welche Standardbildformate werden im Web eingesetzt (min. 3)? 
+	Benennen Sie vor und Nachteile der einzelnen Bildformate!-->
+	<ul>
+		<li><h3>JPG</h3>
+		<p>
+		„JPG“ oder besser „JPEG“ für „Joint Photografic Experts Group“ und bezeichnet ein sogenanntes verlustbehaftetes Dateiformat, dass bis zu 16,7 Millionen Farben darstellen kann.
+		Ein Vorteil beim JPG-Format ist die Möglichkeit der Kompression.
+		</p>
+		<ul>
+			<li>bis zu 16,7 Millionen Farben</li>
+			<li>verlustbehaftete Kompression</li>
+			<li>optimal für große detailreiche Fotos mit vielen Farben</li>
+			<li>keine Transparenz möglich</li>
+			<li>scharfe Kanten werden unscharf dargestellt</li>
+			<li>bei hoher Kompression Artefaktbildung</li>
+		</ul>	
+		</li>
+		<li>
+		<h3>GIF</h3>
+		<p>
+		Das GIF-Format („Graphics Interchange Format“) unterstützt im Gegensatz zum JPG-Format lediglich 256 Farben (8 Bit) und eignet sich somit vor allem für die Darstellung von Bildern mit wenigen Farben (z. B. Logos, Banner)
+		</p>
+		<ul>
+			<li>nur bis 256 Farben möglich</li>
+			<li>verlustfreie Kompression</li>
+			<li>optimal für kleine Bilder, Motive mit großen Farbflächen</li>
+			<li>Alpha- und Index-Transparenz möglich</li>
+			<li>scharfe Kanten werden scharf dargestellt</li>
+			<li>Animationen möglich</li>
+			<li>sehr geringe Dateigröße möglich</li>
+		</ul>
+		</li>
+		<li><h3>PNG</h3>
+		<p>
+		PNG steht für „Portable Network Graphics“.  Das PNG-Format ist dabei im Prinzip ein Hybrid aus JPG- und GIF-Format
+		Dabei unterscheidet man zwischen PNG-8 (8 Bit Farbtiefe) und PNG-24 (24 Bit Farbtiefe), wobei beim PNG-8 ähnlich wie beim GIF-Format nur 256 Farben möglich sind, während bei PNG-24 über 16 Millionen Farben unterstützt werden
+		</p>
+		</p>
+		<p>
+		Das PNG-Format eignet sich also demnach vor allem für kleinere Bilder, Grafiken oder Formen wie z. B. Buttons und ist dann immer erste Wahl, wenn ein transparenter Hintergrund notwendig ist
+		</p>
+		<ul>
+			<li>von 256 – 16,7 Millionen Farben möglich</li>
+			<li>verlustfreie Kompression</li>
+			<li>optimal für kleinere Bilder, Motive mit großen Farbflächen, Logos</li>
+			<li>Transparenz möglich</li>
+			<li>scharfe Kanten werden scharf dargestellt</li>
+		</ul>
+		</li>
+		<li><h3>SVG</h3>
+		<p>
+		SVG-Format („Scalable Vector Graphics“)
+		Grafiken in Form von Vektoren dargestellt, was eine verlustfreie Skalierung bei geringer Dateigröße ermöglicht
+		</p>
+		<ul>
+			<li>verlustfrei skalierbar</li>
+			<li>Animationen möglich</li>
+			<li>optimal für Logos und andere flächige vektorbasierte Motive</li>
+			<li>kann mit Hilfe von JavaScript / jQuery manipuliert werden</li>
+			<li>ideal für den Einsatz beim Thema responsive Webdesign oder fluiden Layouts</li>
+		</ul>
+		</li>
+	</ul>
+	<!-- Antworten sind in semantisch korrektem Markup auszugeben --> 
+	<!--Beispiel Pseudocode:
+	ggf.: <Gliederungselement>
+	<element> Bildformatname </element>
+	<element> Bildformaterklärung </element>
+	... usw.
+	<Gliederungselement>
+	
+	-->
+	
+	<!--Worauf ist im allgemeinen bei der Nutzung von Bildern im Web zu achten? (min. 3)-->
+	<!-- Antworten sind in semantisch korrektem Markup auszugeben --> 
+	
+	<h2>Bilder einbinden</h2>
+	<!--Wie können Bilder im HTML Markup eingebunden werden? Zeigen Sie dazu mindestens ein Beispiel auf. Das Bild soll im Browser sichtbar sein!-->
+	<!-- Antworten sind in semantisch korrektem Markup auszugeben --> 
+	<img src="img/v80x80.jpg" alt="Vogel Image 80x80">
+	<img src="img/vogel.jpg" alt="Vogel Image">
+	<img src="img/vogel_large.jpg" alt="Vogel Image large">
+	<img src="img/Vektor-oder-Pixel.jpg" alt="Vektor-oder-Pixel">
+	<img src="img/bildformat-jpg-png-webp-gif-svg-vergleich.jpg" alt="bildformat-jpg-png-webp-gif-svg-vergleich">
+	<svg width=100%>
+	<rect width="50%" height="80%">
+	</svg>
+</html>

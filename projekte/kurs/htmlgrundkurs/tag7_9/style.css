@@ -1,0 +1,29 @@
+/*
+*{
+  border:2px solid red;
+}
+*/
+/* reset */
+/*
+*{
+  margin:0;
+  padding:0;
+  
+}*/
+/*h3{margin-bottom:0;}*/
+html{
+    background:#f3f3f3;
+    color:#222;
+    /*font-style:italic;*/
+    font-size:100%; /*16px;*/
+  }
+   body{
+     /* background:yellow; */
+   /*color:green;*/
+   font-size:80%;
+   }
+   h1{background:green;
+   font-size:80%;
+   }
+  
+  

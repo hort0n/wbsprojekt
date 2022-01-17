@@ -1,0 +1,1 @@
+Legen Sie in diesem Verzeichnis die Dateien für die Aufgabe 1 der Übung CSS ab.

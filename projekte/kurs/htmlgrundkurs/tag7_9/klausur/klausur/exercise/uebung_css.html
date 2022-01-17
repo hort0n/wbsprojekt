@@ -1,0 +1,141 @@
+<!--  Bestandteil der Grundkursprüfung! -->
+<!--
+
+- Erzeugen Sie ein neues HTML-Dokument und speichern es im Ordner des aktuellen Tages unter dem Namen uebung_css.html ab. 
+
+- Erstellen Sie eine unsortierte Liste mit 8 Listenpunkten.
+  Die ersten 4 Listenpunkte sollen jeweils eine andere Farbe zugewiesen bekommen.
+
+- im 3. Listenpunkt soll sich eine sortierte Liste mit 3 Listenpunkten befinden. In diesen 3 Listenpunkten erstellen Sie bitte jeweils einen Link zu einer von Ihnen gewählten Seite. Die Links sollen nicht unterstrichen dafür aber fett dargestellt sein. Die Schriftgröße der Links soll 12px entsprechen.
+Bei dem darüberfahren mit der Maus soll sich die Hintergrundfarbe des Links ändern.
+
+- Erzeugen Sie nach der Liste einen Textabsatzblock mit einem Blindtext Ihrer Wahl (unter www.blindtextgenerator.de können Sie sich einen erstellen). In dem Blindtext sollen sollen 3 Worte einzeln an unterschiedlichen Stellen gesondert formatiert werden. 1 Wort kursiv, 1 Wort unterstrichen sowie 1 Wort fett, die Formatierungen der Wörter sind mit CSS zu realisieren und nicht durch formatierende Elemente (Wenn sie formatierende Elemente einsetzen so ändern sie deren Standarddarstellung).
+
+- Erstellen Sie eine Überschrift der 3. Ordnung vor dem Textabsatzblock.
+und weisen Sie Ihr die Schriftgröße 16px zu.
+- Erstellen sie eine Überschrift der 1. Ordnung vor den Listen und geben dieser einen Rahmen von 2px gepunktet die Farbe können sie frei wählen der Rahmen muss aber sichtbar sein.
+
+Verwenden sie für die notwendigen CSS-Angaben einen Stylebereich oder Inline-Styles.
+
+Diese Übung  wird bewertet und ist Bestandteil der Grundkursprüfung. Die Abgabe der Datei uebung_css.html erfolgt am Tag der Bausteinprüfung.
+
+-->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <title>Uebung_css</title>
+  <style>
+    /*Unsortierte Liste*/
+    ul>li:nth-child(1) {
+      color: red;
+    }
+
+    ul>li:nth-child(2) {
+      color: green;
+    }
+
+    ul>li:nth-child(3) {
+      color: blue;
+    }
+
+    ul>li:nth-child(4) {
+      color: gold;
+    }
+
+    /*andere möglichkeit
+    li.color_red{
+      color:red;
+    }
+    li.color_blue{
+      color:blue;
+    }
+    li.color_green{
+      color:green;
+    }
+    li.color_yellow{
+      color:yellow;
+    }
+    */
+    /*------------------*/
+
+    /*Sortierte Liste*/
+    ol li {
+      list-style-position: inside;
+    }
+
+    ol li {
+      font-size: 12px;
+    }
+
+    ol a {
+      color: blue;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    ol a:hover {
+      color: green;
+    }
+
+    /*------------------*/
+
+    /*Einzelne Wörter*/
+    .wort_kursiv {
+      font-style: italic;
+    }
+
+    .wort_unterstrich {
+      text-decoration: underline;
+    }
+
+    .wort_fett {
+      font-weight: bold;
+    }
+
+    /*------------------*/
+
+    /*Überschriften*/
+    h3 {
+      font-size: 16px;
+    }
+
+    h1 {
+      border: 2px dotted green;
+      display: inline-block;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Überschrift der 1. Ordnung</h1>
+  <ul>
+    <li>Listenpunkt-1</li>
+    <!-- <li class="color_red">Listenpunkt-1</li> -->
+    <li>Listenpunkt-2</li>
+    <!-- <li class="color_blue">Listenpunkt-2</li> -->
+    <li>Listenpunkt-3
+      <!-- <li class="color_green">Listenpunkt-3 -->
+      <ol>
+        <li><a href="https://google.de" target="_blank" title="Google">Google</a></li>
+        <li><a href="https://github.com" target="_blank" title="Github">Github</a></li>
+        <li><a href="https://php.net" target="_blank" title="Php">Php</a></li>
+      </ol>
+    </li>
+    <li>Listenpunkt-4</li>
+    <!-- <li class="color_yellow">Listenpunkt-4</li> -->
+    <li>Listenpunkt-5</li>
+    <li>Listenpunkt-6</li>
+    <li>Listenpunkt-7</li>
+    <li>Listenpunkt-8</li>
+  </ul>
+  <h3>Überschrift der 3. Ordnung</h3>
+  <p>Lorem, ipsum <span class="wort_kursiv">dolor</span> sit amet <span class="wort_fett">consectetur</span> adipisicing
+    elit. <span class="wort_unterstrich">Consequatur</span> laborum aliquid nobis autem harum odio, minus a explicabo
+    cum nulla quis quisquam omnis atque sed animi tempore. Aspernatur, quaerat eum?</p>
+  <span><a href="../exercise/">Zurück</a></span>
+</body>
+
+</html>

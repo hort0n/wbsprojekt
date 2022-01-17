@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>dynamische Pseudoklassen</title>
+  <!--<link rel="stylesheet" href="style.css">-->
+  <!-- HTML Kommentar-->
+  <style>
+  /* CSS - Kommentar */
+  /* Linkpseudoklassen */
+  /* unbesuchte verweisziele */
+  /*:link{
+    color:teal;
+  }*/
+  
+  /* besuchte Verweisziele */
+  /*:visited{
+  color:#000;
+  }*/
+  /* Allgemeine Basisformatierung Anker */
+  /*body{color:red;}*/
+  a{color:teal;
+  /*text-decoration:none;*/
+  }
+  /* echte dynamische Pseudoklassen */
+  a:hover{
+  /*border:2px solid red;*/
+  text-decoration:none;
+  color:blue;
+  }
+  h3:hover{
+  background:teal;
+  }
+  /*a:hover,a:focus{}*/
+  a:focus{
+  background:#ccc;
+  outline:1px dotted #000;
+  }
+ /* a:focus-visible{outline:none;}*/
+ 
+ input:hover{
+ background:#ccc;
+ }
+ input:focus{
+ border:2px solid teal;
+ }
+ div:focus-within{background:red;}
+ 
+ a:active,
+ [type="submit"]:active{
+ background:red;
+ }
+ /*Menu*/
+ nav ul{
+     background: #ccc;
+     min-height: 3em;
+     text-align: center;
+ }
+ nav li{
+     list-style: none;
+     display:inline-block;
+     line-height: 3em;
+     
+     margin: 2px 0;
+    background: #ddd;
+     
+ }
+ nav a{
+     text-decoration: none;
+     display: block;
+     outline: none;
+     padding:0 1em;
+     color: #000;
+ }
+
+nav a:focus{
+    outline-style: none;
+}
+nav a:hover{
+    color: #000;
+    background: #777;
+}
+nav.active:active{
+    background: none;
+}
+  </style>
+  <!-- HTML kommentar -->
+</head>
+<body>
+<!-- Navigationsliste aufbauen (5)-->
+<!-- Grundformatierung + :hover, Menüpunkte nebeneinander stellen -->
+
+  <h1>Standardselektoren</h1>
+  <nav>
+      <ul>
+          <li><a href="01_standardselektoren.html" class="active">01_standardselektoren</a></li>
+          <li><a href="02_standardselektoren.html" class="active">02_standardselektoren</a></li>
+          <li><a href="03_kombinatoren.html" class="active">03_kombinatoren</a></li>
+          <li><a href="04_spezifitaet.html" class="active">04_spezifitaet</a></li>
+          <li><a href="05_pseudoklassen.html" class="active">05_pseudoklassen</a></li>
+      </ul>
+  </nav>
+
+  <p class="klasse">Textabsatz</p>
+  
+  <h2>dynamische Pseudoklassen</h2>
+  <div>
+  <!-- <p class="die klasse mit dem punkt"> -->
+    <p class="special-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, maxime, atque, itaque, laborum nostrum aperiam labore accusamus consequuntur voluptates nihil impedit dolorem maiores expedita rem error dolorum quae. Alias, culpa.</p>
+  </div>
+  <h3 id="ich_ueberlege_gerade">Überschrift der 3. Ordnung</h3>
+  <span style="color:red;">mit style Attribut formatiert</span>
+  <!-- <div tabindex="0"> -->
+  <div>
+    <a href="">Testlink</a>
+  </div>
+  <a href="http://www.karzauninkat.com/Goldhtml/goldhtml.htm" target="_blank">Wie man alles richtig macht</a><br>
+  <a href="https://www.stupidedia.org/stupi/HTML" target="_blank">Fachbegriffe "einfach erklärt"</a><br>
+  <a href="gibt_es_nicht.html">mich gibt es wirklich nicht</a> <br>
+  <input type="text">
+  <input type="submit">
+</body>
+</html>

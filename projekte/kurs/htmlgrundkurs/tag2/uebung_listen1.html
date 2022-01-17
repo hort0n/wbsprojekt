@@ -1,0 +1,86 @@
+<!-- Erstellen Sie eine verschachtelte und vermischte Aufzählung die folgenden Kriterien entspricht:    
+
+Die Listenelemente der 1. Hierarchie sollen ein vorangestelltes Rechteck haben.
+Elemente der 2. Hierarchie sollen große Römische Ziffern vorangestellt haben.
+Elemente der 3. Hierarchie sind mit einen nicht gefüllten Kreis zu versehen.
+
+
+Listenpunkt 1 
+Listenpunkt 2
+Listenpunkt 3
+		Listenpunkt 3.50
+		Listenpunkt 3.51
+		Listenpunkt 3.52
+				Listenpunkt 3.52.1
+				Listenpunkt 3.52.2
+Listenpunkt 4
+Listenpunkt 5
+		Listenpunkt 5.50
+		Listenpunkt 5.51
+Listenpunkt 6
+-->
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+	<meta name="description" 
+	content="Beschreibung der Seite">
+    <title>einfaches HTML-Grundgerüst</title>
+  </head>
+  <body>
+	
+	<ul style="list-style:square">
+		<li>
+			Listenpunkt 1
+		</li>
+		<li>
+			Listenpunkt 2
+		</li>
+		<li>
+			Listenpunkt 3
+			<ul style="list-style:upper-roman;">
+				<li>
+					Listenpunkt 3.50	
+				</li>
+				<li>
+					Listenpunkt 3.51	
+				</li>
+				<li>
+					Listenpunkt 3.52
+
+					<ul style="list-style:disc;">
+						<li>
+							Listenpunkt 3.52.1
+						</li>
+						<li>
+							Listenpunkt 3.52.2
+						</li>
+					</ul>
+					
+				</li>
+			</ul>						
+		</li>
+		<li>
+			Listenpunkt 4
+		</li>
+		<li>
+			Listenpunkt 5
+			<ul style="list-style:upper-roman;">
+				<li>
+					Listenpunkt 5.50
+				</li>
+				<li>
+					Listenpunkt 5.51
+				</li>
+			</ul>
+		
+		</li>
+		<li>
+			Listenpunkt 6
+		</li>	
+	</ul>
+
+ 
+ </body>
+</html>

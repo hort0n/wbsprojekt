@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family - Start Seite</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/helpers.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/ft-form-styles-v3.css">
+</head>
+<body>
+
+    <nav class="wrap">
+        <a href=""><img src="img/bundesminesterium.png" alt="" class="logo fl-l" width="413" height="174"></a>
+        <form class="search fl-r" action="#" method="post" target="_blank">
+              <span>Suchbegriff </span>
+              <input type="search" name="musicsearch" placeholder="...">
+              <input class="submit_btn" type="submit" value="Los">
+          </form>
+        <input type="checkbox" name="trigger" id="trigger">
+        <label class="hamburger" for="trigger"></label>  
+        <ul class="menu fl-r clearfix">
+            <li class="menu_item fl-l"><a href="index.html" title="Start Seite" class="menu_link">Start</a></li>
+            <li class="menu_item fl-l"><a href="impressum.html" class="menu_link">Impressum</a></li>
+            <li class="menu_item fl-l active"><a href="kontakt.html" class="menu_link">Kontakt</a></li>
+            <li class="menu_item fl-l"><a href="" class="menu_link">Inhalt</a></li>
+        </ul>
+
+    </nav>
+
+    <header class="wrap">
+        <h2 class="header_title">Gesund ins Leben</h2>
+        <h3 class="header_sub_title">Netzwerk Junge Familie</h3>
+    </header>
+    <div class="wrap col-50 mar-tb">
+        <form action="#" id="ft-form" method="GET" accept-charset="UTF-8">
+            <fieldset>
+              <label>
+                Name
+                <input type="text" name="Name" required>
+              </label>
+              <label>
+                E-Mail-Adresse
+                <input type="email" name="E-Mail" required>
+              </label>
+              <label>
+                Ihre Nachricht
+                <textarea rows="3" name="Nachricht" required></textarea>
+              </label>
+              <div>
+                <label>
+                  <input type="checkbox" name="Datenverarbeitung bestätigt" value="Ja" required>
+                  Ich bestätige, dass ich mit der Verarbeitung meiner Eingaben zum Zwecke der Anfragebearbeitung, einverstanden bin.
+                </label>
+              </div>
+            </fieldset>
+            <div class="btns">
+              <input type="text" name="_gotcha" value="" style="display:none;">
+              <input type="submit" value="Absenden">
+            </div>
+          </form>
+    </div>
+</body>
+</html>

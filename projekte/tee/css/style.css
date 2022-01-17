@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'BellMT';
+    font-weight: normal;
+    font-style: normal;
+    src:url('../fonts/BellMT.woff2') format('woff2');
+    /*
+    url('../fonts/BellMT.wooff') format('woff'),
+    url('../fonts/BellMT.ttf') format('ttf'),
+    url('../fonts/BellMT.svg') format('svg')
+    */
+
+
+}
+@font-face {
+    font-family: 'BodoniMT';
+    font-weight: normal;
+    font-style: normal;
+    src:url('../fonts/BodoniMT.ttf') format('ttf');
+
+}
+
+html{
+    background: #ffffff;
+    font-family: 'BellMT', serif;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+ul, p{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    max-width: 870px;
+    width: 100%;
+    margin: 0 auto;
+}
+.ueberschrift{
+    position: absolute;
+    left: -9999px;
+}
+/* header
+======================== */
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    
+    display: block;
+    width: 229px;
+    height: 229px;
+    
+
+}
+
+.menu_link{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0F132C;
+}
+.menu_link:hover,
+.menu_link:focus{
+    color: #9195a8;
+}
+.active,
+.active:hover,
+.active:focus{
+    text-decoration: underline;
+}
+/* content
+==================== */
+.content{
+    margin-top: 80px;
+}
+
+.content_center{
+    margin-top: 40px;
+}
+.content_center img{
+    width: 100%;
+    max-width: 870px;
+    height: auto;
+}
+.content_bottom{
+    margin-top: 30px;
+    margin-bottom: 220px;
+}
+
+/* tradition content
+==================== */
+.clear:after{
+    content:"";
+    clear: both;
+    display: table;
+}
+.tradition_content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 110px;
+    margin-bottom: 125px;
+}
+
+.tradition_content_left{
+    /* float: left; */
+    width: 60%;
+}
+.tradition_content_left img{
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.tradition_content_right{
+    /* float: left; */
+    width: 40%;
+    padding: 0 5%;
+}
+/* tee sorten
+==================== */
+.tee_sorten_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 20px;
+}
+.tee_sorten_item p{
+    color: #000000;
+}    
+.tee_sorten_item img{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.tee_sorten_top{
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+.tee_sorten_bottom{
+    display: flex;
+    justify-content:space-around; 
+    flex-wrap: wrap;
+}
+.tee_content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 125px;
+}
+
+.tee_link{
+    font-family: 'BodoniMT', serif;
+    font-size: 24px;
+    color: #9a9a9a;
+    text-decoration: none;
+}
+.active_tee_link,
+.active_tee_link:hover,
+.active_tee_link:focus{
+    color: #000000;
+}
+.back,
+.next{
+    text-decoration: none;
+}
+/* stor
+==================== */
+.stor_content{
+
+    display: table;
+    margin: 100px auto;
+}
+.stor_content img{
+
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+@media screen and (max-width:750px) {
+    .menu {
+        flex-direction: column;
+    }
+    .menu :nth-child(1) { order: 2; }
+    .menu :nth-child(2) { order: 3; }
+    .menu :nth-child(3) { order: 1; }
+    .menu :nth-child(4) { order: 4; }
+    .menu :nth-child(5) { order: 5; }
+
+    .logo{
+        content: url(../img/logo_sm.jpg);
+    }
+    .content{
+        margin-top: 40px;
+    }
+    
+    .tee_content{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .tee_sorten{
+        flex-direction: column;
+    }
+    .tee_sorten_item{
+        margin-top: 20px;
+    }
+    .tradition_content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .tradition_content p{
+        margin-top: 20px;
+    }
+    .tradition_content_right{
+        width: 80%;
+        
+    }
+    .stor_content{
+        margin: 50px auto;
+    }
+}

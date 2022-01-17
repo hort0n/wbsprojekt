@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Definitionsliste</title>
+</head>
+<body>
+  <h1>Beschreibungslisten in HTML</h1>
+  <h2>Aufbau</h2>
+  <dl><!-- definition list -->
+  <!-- Eine Definitionsliste besteht mindestens aus einem <dt>und einem <dd>, es können auf ein <dt> mehrere <dd> folgen -->
+    <dt>Definition Term</dt>
+    <dd>definition definition, definition data, definition description</dd>
+  </dl>
+  <!-- abbr = Abkürzung , title-Attribut ist semantisch erforderlich , syntaktisch jedoch optional -->
+  <!-- dfn - Inline Begriffserklärung , vergleichbar mit em + Semantischerbedeutung - Definitionsbegriff -->
+  
+  <p><dfn><abbr title="HyperTextMarkupLanguage">HTML</abbr> ist eine Beschreibungssprache/Auszeichnungssprache</dfn> keine Programmiersprache</p>
+  
+  <h3>klassisches Beispiel</h3>
+  <dl>
+    <dt>HTML</dt>
+    <dd>HyperTextMarkupLanguage</dd>
+    <dd>HTML ist eine Beschreibungssprache/Auszeichnungssprache keine Programmiersprache</dd>
+    <dt>SEO</dt>
+    <dd>SearchEngineOptimizing</dd>
+    <dd>Bei der Suchmaschinenoptimierung unterscheidet man zwischen ON-Page- und OFF-Page Optimierung</dd>
+  </dl>
+  
+  <h3>Musikstile</h3>
+  <dl>
+    <dt>Rock-Musik</dt>
+    <dd>Erklärung/beschreibung</dd>
+    <dt>Pop-Musik</dt>
+    <dd>Erklärung/beschreibung</dd>
+  </dl>
+  
+  <h3>Addressangeben</h3>
+  <dl>
+    <dt>Firmenname / Ansprechpartner</dt>
+    <!-- <dd>ggf. Ansprechpartner bei firma</dd> -->
+    <dd>
+      Anschrift:
+      <ul>
+        <li>Straße: </li>
+        <li>PLZ: </li>
+        <li>Ort: </li>
+      </ul>
+    </dd>
+    <dd>
+      Kontakt:
+      <ul>
+        <li>Tel.: </li>
+        <li>Email: </li>
+      </ul>
+    </dd>
+  </dl>
+  
+  <h3>gleiche Bedeutung</h3>
+  <dl>
+    <dt>Santa Claus</dt>
+    <dt>Weihnachtsmann</dt>
+    <dt>Väterchen Frost</dt>
+    <dd>verschiedene Namen für Geschenkeverteiler</dd>
+  </dl>
+  
+  <h3>Alternative zur Definitionsliste mit semantischen HTML5-Elementen</h3>
+  
+  <article>
+    <h1>Webentwicklung</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, tempore, tempora repellendus ad possimus autem nisi voluptate debitis tenetur et amet magnam pariatur impedit eius temporibus error laboriosam dicta facilis.</p>
+    <article>
+      <h1>Html und CSS</h1>
+      <section>
+        <h1>HTML</h1>
+      </section>
+      <section>
+        <h1>CSS</h1>
+      </section>
+    </article>
+    <article>
+      <h1>Programmiersprachen im Web</h1>
+      <section>
+        <h1>PHP</h1>
+      </section>
+      <section>
+        <h1>Javascript</h1>
+      </section>
+    </article>
+  </article>
+  
+</body>
+</html>

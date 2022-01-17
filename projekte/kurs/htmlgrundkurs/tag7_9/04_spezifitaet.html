@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Spezifität - Standardselektoren</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- HTML Kommentar-->
+  <style>
+  /* CSS - Kommentar */
+  h6#rangfolge{color:#ffc; border: 2px solid red;}
+  #rangfolge{color:yellow;}
+  h6.rangfolge{color:#fff;background:blue;}
+  .rangfolge{color:blue;}
+  /* span+h6{color:red; } */
+  h6{color:green;}
+  
+  </style>
+  <!-- HTML kommentar -->
+</head>
+<body>
+
+  <h1>Standardselektoren</h1>
+
+  <p class="klasse">Textabsatz</p>
+  
+  <h2>Spezifität</h2>
+  <div>
+  <!-- <p class="die klasse mit dem punkt"> -->
+    <p class="special-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, maxime, atque, itaque, laborum nostrum aperiam labore accusamus consequuntur voluptates nihil impedit dolorem maiores expedita rem error dolorum quae. Alias, culpa.</p>
+  </div>
+  <h3 id="ich_ueberlege_gerade">Überschrift der 3. Ordnung</h3>
+  <span style="color:red;">mit style Attribut formatiert</span>
+  <h6 class="rangfolge" id="rangfolge">Rangfolge und reihenfolge</h6>
+</body>
+</html>

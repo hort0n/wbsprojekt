@@ -1,0 +1,68 @@
+  #form *,
+  #form ::after,
+  #form ::before {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb
+  }
+
+  #form [type=email],
+  #form [type=text],
+  #form select,
+  #form textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    border-width: 1px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    box-shadow: 0 0 #0000,0 0 #0000,0 1px 2px 0 rgba(0,0,0,.05);
+    border-color: rgb(48, 47, 47);
+    width: 100%
+  }
+  
+  #form select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+  }
+
+  #form [type=email]:focus,
+  #form [type=text]:focus,
+  #form select:focus,
+  #form textarea:focus {
+    border-color: #bbb;
+    box-shadow: 0 0 0 0 #ccc,0 0 0 2px rgba(170, 168, 168, 0.5),0 0 #0000
+  }
+
+  #form .btn {
+    display: inline-block;
+    box-shadow: 0 0 #0000,0 0 #0000,0 1px 2px 0 rgba(0,0,0,.05);
+    padding: 10px 20px;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: #bbb;
+    background-color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 700
+  }
+
+  #form .btn:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-color: #bbb;
+    box-shadow: 0 0 0 2px #fff,0 0 0 4px rgba(199,210,254,.5),0 0 #0000
+  }
+  #form .btn{
+    background-color: #f3f4f5;
+    transition: background-color .5s
+  }
+  #form .btn:hover {
+    background-color: #ccc
+  }

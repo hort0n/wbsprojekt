@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Standardselektoren</title>
+  <!-- HTML Kommentar-->
+  <style>
+  /* CSS - Kommentar */
+  /* Universalselektor - * */
+  
+  *{
+  border:1px dotted lime;
+  /*border-top:5px solid lime; 
+  border-left:5px solid red;
+  border-bottom:5px solid green;
+  border-right-width:20px;
+  border-right-style:dashed;
+  border-right-color:blue;*/
+  
+  /**/
+  /* top right bottom left*/
+  /* border-width:1px 2px 3px 4px;
+  /* top right bottom left*/
+  /* border-style:solid dotted double dashed;
+  /* border-color:red green blue orange;/* top right bottom left*/
+  /**/
+  }
+  
+  
+  /* Typselektor - html,h1 usw. */
+  p{color:#f00;}
+  p{color:hotpink;}
+
+  /* Klassenselektor -  .klassename */
+  .die klasse mit dem punkt {
+  font-size:30px;
+  }
+  
+  /*.die{
+  font-size:30px;
+  }
+  .klasse{
+  background:#333;
+  color:lightblue;
+  font-size:50px;
+  }
+  
+  .mit{
+  background:#ccc;
+  }*/
+  
+  .special-text{background:purple;
+  color:#f3f3f3;
+  }
+  
+  .class1{}
+  /* Id-Selektor - #idname*/
+  #ich_ueberlege_gerade{
+  background:#ccc;
+  color:brown;
+  }
+  
+  </style>
+  <!-- HTML kommentar -->
+</head>
+<body>
+  <!-- <div class="die">
+    <klasse>
+      <mit>
+        <dem>
+          <punkt>
+            text
+          </punkt>
+        </dem>
+      </mit>
+    </klasse>
+  </div> -->
+  <h1>Standardselektoren <em>CSS</em>-Level1</h1>
+  
+  <p class="klasse">Textabsatz</p>
+  
+  <h2>Überschrift der 2. Ordnung</h2>
+  <!-- <p class="die klasse mit dem punkt"> -->
+  <p class="special-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, maxime, atque, itaque, laborum nostrum aperiam labore accusamus consequuntur voluptates nihil impedit dolorem maiores expedita rem error dolorum quae. Alias, culpa.</p>
+  
+  <h3 id="ich_ueberlege_gerade">Überschrift der 3. Ordnung</h3>
+  <span style="color:red;">mit style Attribut formatiert</span>
+</body>
+</html>

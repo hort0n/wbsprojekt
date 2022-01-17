@@ -1,0 +1,75 @@
+/* CSS Document */
+
+/* Css-Regelsatz / Regelabsatzblock */
+/*
+Selektor{
+  Eigenschaft:Wert;
+}
+*/
+
+/* Beispiel Typlselektor
+
+a{
+	color:#333;
+	text-decoration:none;
+	border-bottom:1px dotted #333;
+}
+*/
+/* 
+Pseudoklassen :hover (wenn das Element mit der Maus berührt wird) und :focus	(wenn das Element gerade ausgewählt ist)
+*/
+/*
+a:focus, a:hover{
+	color:#f00;
+	border-color:#f00;
+}
+
+*/
+nav ul{
+	background:#ccc;
+	text-align:center;
+}
+nav li{
+	list-style:none;
+	display:inline-block;
+	height:40px;
+	padding:0 20px;
+}
+nav li:hover{
+	background-color:#ddd;
+}
+
+nav a{
+	text-decoration:none;
+	line-height:40px;
+}
+
+nav a{
+	text-decoration:none;
+	line-height:40px;
+}
+
+.ordner a{
+	text-decoration:none;
+}
+.ordner a:hover{
+	color:red;
+}
+
+.ordner::before{
+	/*
+	content:url("../Bilder/icons/folder.png");
+	*/
+	
+	background:url("../Bilder/icons/folder.png");
+	background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    height: 14px;
+	width:21px;
+    position: relative;
+    top: 1px;
+}
+.datei img{
+	padding-right:5px;
+}
