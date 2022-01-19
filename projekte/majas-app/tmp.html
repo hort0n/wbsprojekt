@@ -1,0 +1,100 @@
+<html>
+<head>
+    <style>
+    .imgscale{
+        width:100%;
+        height:auto;
+        display:block;
+    }
+    .center{
+         margin: 0 auto !important;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="file" id="image-input" accept="image/*">
+        <!-- <img id="preview" class=""></img> -->
+        <canvas id="canvas"></canvas>
+    </div>
+    <div>
+        <input type="button" value="Make greyscale" onclick="makeGray()">
+    </div>
+    <div>
+        <input type="button" value="Go!" onclick="con()">
+    </div>
+
+    <script>
+
+        let imgInput = document.getElementById('image-input');
+        var img = document.createElement("img");
+
+        imgInput.addEventListener('change', function (e) {
+            if (e.target.files) {
+                let imageFile = e.target.files[0];
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    img.onload = function (event) {
+                    var MAX_WIDTH = 500;
+                    var MAX_HEIGHT = 500;
+
+                    var width = img.width;
+                    var height = img.height;
+
+                        // Change the resizing logic
+                        if (width > height) {
+                            if (width > MAX_WIDTH) {
+                                height = height * (MAX_WIDTH / width);
+                                width = MAX_WIDTH;
+                            }
+                        } else {
+                            if (height > MAX_HEIGHT) {
+                                width = width * (MAX_HEIGHT / height);
+                                height = MAX_HEIGHT;
+                            }
+                        }
+                        
+                        // get canvas element
+                        var canvas = document.getElementById("canvas");
+                        canvas.width = width;
+                        canvas.height = height;
+                        
+                        var ctx = canvas.getContext("2d");
+
+                        // Actual resizing
+                        ctx.drawImage(img, 0, 0, width, height);
+                    }
+                    img.src = e.target.result;
+                }
+                reader.readAsDataURL(imageFile);
+            }
+        });
+
+        function makeGray() {
+            //change all pixels of image to gray
+
+            // get image
+            var image = document.getElementById("canvas");
+            //Make new SimpleImage from file input
+            image = new SimpleImage(image);
+
+            for (var pixel of image.values()) {
+                var avg = (pixel.getRed()+pixel.getGreen()+pixel.getBlue())/3;
+                pixel.setRed(avg);
+                pixel.setGreen(avg);
+                pixel.setBlue(avg);
+            }
+            //display new image
+            var canvas = document.getElementById("canvas");
+            
+            image.drawTo(canvas);
+        }
+
+
+    </script>
+
+
+<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+</body>
+
+</html>

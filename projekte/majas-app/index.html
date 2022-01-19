@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="container text-center">
+        <h2 class="display-4 font-weight-bold text-light">Value exercise</h2>
+        <div class="row">
+            <nav class="col-12 navbar navbar-expand bg-light navbar-light">
+                <ul class="navbar-nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link active font-weight-bold text-dark" href="">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Bilder</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- content -->
+    <main class="container">
+<!-- canvas und control bereich-->
+        <div class="row">
+            
+            <div class="col-md-6 text-center bg-warning h-100">
+                <div class="canvas-container">
+                <canvas class="center" id="canvas"></canvas>
+                <canvas class="center" id="box"></canvas> 
+        
+                </div>
+            </div>
+            <!-- ----------------------------------------- -->
+            <div class="Sliders col-md-6 align-items-center bg-secondary d-flex flex-column justify-content-center">
+<!--                 <label>What is the value?</label><br>
+                <input type="range" id="slider" name="slider" min="0" max="255" value="50"> -->
+        
+                <label for="slider" class="form-label mt-2 mb-2">What is the value?</label>
+                <input type="range" id="slider" class="form-range mt-2 mb-2" name="slider" min="0" max="255" value="50">
+
+                <button class="btn btn-primary mt-2 mb-2" onclick="submit()">Submit</button>
+
+                <div>Chosen value (<span class="badge badge-info" id="demo">%</span>)</div>
+                <div class="valuebox mt-2 mb-2" id="valbox"> </div>
+                <br>
+                <div>Actual  value (<span class="badge badge-info" id="lumval">%</span>)</div>
+                <div class="lumbox mt-2 mb-2" id="lumbox"> </div>
+                <br>
+                <p>Score: <span id="score"></span></p><br>
+    
+            </div>
+            
+        </div>
+<!-- end canvas und control bereich -->
+        
+        
+        <!--++++++++++++++-->
+        <div class="row">	            
+            <div class="col-md-3 custom-file">
+<!--                 <input type="file" multiple="false" accept="image/*" class="custom-file-input" id="finput" onchange="upload()"> -->
+                <input type="file" id="image-input" accept="image/*">
+                <label class="custom-file-label bg-secondary" for="customFileLang">Choose file</label>
+            </div>
+              
+            <div class="col-md-3 bg-info">    
+                {tmp 1}
+            </div>
+
+            <div class="col-md-6 bg-success">
+                
+                {tmp 2}
+            </div>
+        </div>
+        <!--++++++++++++++-->
+        <div class="row">	
+            <div class="col-md-6 bg-info">
+                <input type="button" value="Make greyscale" onclick="makeGray()">
+  
+                <input type="button" value="Go!" onclick="con()">
+              
+            </div>
+            <div class="col-md-6 bg-primary">
+                {tmp 3}
+            </div>
+        </div>
+    </main>
+
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

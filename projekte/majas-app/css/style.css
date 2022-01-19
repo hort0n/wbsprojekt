@@ -1,0 +1,107 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Verdana, sans-serif;
+	font-size: 12px;
+	background-color: #fff;
+}
+.imgscale{
+  width:100%;
+  height:auto;
+  display:block;
+}
+.center{
+  margin: 0 auto !important;
+}
+
+/* header
+=======================*/ 
+
+
+/* end header
+=======================*/ 
+
+
+/* content
+=======================*/ 
+.container {
+	background-color: rgb(207, 193, 174);;
+}
+
+/* end content
+=======================*/ 
+
+
+/* canvas container
+=======================*/ 
+
+.canvas-container{
+  position: relative;
+  min-height: 500px;
+}
+#canvas{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+/*   width:95%;
+  height: 100%; */
+  /* border: 1px solid black; */
+}
+#box{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+/*   width:90%;
+  height: 90%; */
+  /* border: 1px solid black; */
+}
+
+/* end canvas container
+=======================*/
+
+
+/* control container
+=======================*/
+
+
+/* end control container
+=======================*/
+
+
+
+/* menu 
+===================== */
+
+
+/* end menu 
+===================== */
+
+/* valuebox 
+===================== */
+
+.valuebox{
+    background-color: transparent;
+    width:100px;
+    height:100px;
+    border: 1px solid black;
+  }
+
+  /* end valuebox 
+===================== */
+
+/* lumbox 
+===================== */
+
+  .lumbox{
+    background-color: transparent;
+    width:100px;
+    height:100px;
+    border: 1px solid black;
+  }
+
+    /* end lumbox 
+===================== */

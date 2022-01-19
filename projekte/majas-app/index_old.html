@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Value Exercise</title>
+    <meta charset="UTF-8" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  </head>
+
+  <body>
+
+  <div class="grid-container" >
+    <div class="Header">
+      <h1>Value exercise</h1>
+    </div>
+  <div class="Image" >   
+
+  
+
+  <div style="position: relative;">
+    <canvas id="can" 
+      style="position: absolute; left: 0; top: 0; z-index: 0;max-width:80%;"></canvas>
+    <canvas id="box" 
+      style="position: absolute; left: 0; top: 0; z-index: 1;max-width:80%;"></canvas>
+   </div>
+   
+
+  <p>
+    <input type="file" multiple="false" accept="image/*" id="finput" onchange="upload()">
+
+  </p>
+<br><br>
+</div>
+  <div class="Sliders">
+    <label>What is the value?</label><br>
+    <input type="range" id="slider" name="slider" min="0" max="255" value="50">
+
+    <button onclick="submit()">Submit</button><br>
+    Chosen value (<span id="demo">%</span>) :  <div class="valuebox" id="valbox"> </div>
+    <br>
+    Actual  value (<span id="lumval">%</span>) :  <div class="lumbox" id="lumbox"> </div>
+    <br>
+    <p>Score: <span id="score"></span></p><br>
+    
+  </div>
+  <div class="Footer">
+    <p>
+      <input type="button" value="Make greyscale" onclick="makeGray()">
+  
+      <input type="button" value="Go!" onclick="con()"></p>
+  
+  
+  </div>
+</div>
+
+
+</div>
+
+
+    </p>
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js" >
+    </script>
+    <script type="text/javascript" src="js/script.js"></script>
+  
+  </body>
+</html>
