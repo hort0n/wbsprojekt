@@ -2,9 +2,9 @@
 
 PHP (MVC Pattern), HTML, CSS
 -start seite
--simple Gästebuch
+-simple gästebuch
 -works
--jogin
+-login
 -impressum
 
 gehostet auf raspberry pi
