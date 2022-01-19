@@ -3,7 +3,7 @@
 class DB{
 
 	const USER = "root";
-	const PASS = "xxxxxx";
+	const PASS = "......";
 	const HOST = "db";
 	const DB   = "wbsprojekt";
 
